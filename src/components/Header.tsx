@@ -1,49 +1,47 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Programs", href: "#programs" },
-    { name: "Admissions", href: "#admissions" },
-    { name: "Faculty", href: "#faculty" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "#about" },
+    { name: "Courses", href: "#courses" },
+    { name: "Tajweed", href: "#tajweed" },
+    { name: "Hifth", href: "#hifth" },
+    { name: "Qiraat", href: "#qiraat" },
+    { name: "Arabic", href: "#arabic" },
+    { name: "To Register", href: "#register" },
+    { name: "Ijazaat", href: "#ijazaat" },
+    { name: "Videos", href: "#videos" },
+    { name: "Events", href: "#events" },
+    { name: "Contact us", href: "#contact" }
   ];
 
   return (
-    <header className="relative bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-700 text-white shadow-lg">
-      {/* Islamic Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="h-full w-full bg-repeat" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Cpath d='M30 30l15-15v30l-15-15zm-15 0L0 15v30l15-15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }} />
-      </div>
-      
-      <div className="relative container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+    <header className="bg-slate-700 text-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-              <span className="text-emerald-800 font-bold text-xl">IA</span>
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-teal-400 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">IJ</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold">Ibn Al-Jazari Institute</h1>
-              <p className="text-sm opacity-90">Islamic Education & Research</p>
+              <h1 className="text-xl font-bold text-teal-300">IBN AL JAZARI</h1>
+              <p className="text-xs text-slate-300">INSTITUTE</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:text-yellow-300 transition-colors duration-200 font-medium"
+                className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
               >
                 {item.name}
               </a>
@@ -53,30 +51,30 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:bg-white/20"
+            size="sm"
+            className="lg:hidden text-white hover:bg-slate-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4">
-            <div className="flex flex-col space-y-2">
+          <div className="lg:hidden py-4 border-t border-slate-600">
+            <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="py-2 px-4 hover:bg-white/20 rounded transition-colors duration-200"
+                  className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-            </div>
-          </nav>
+            </nav>
+          </div>
         )}
       </div>
     </header>

@@ -1,114 +1,135 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 export const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
       title: "Address",
-      content: "123 Islamic Center Street\nEducation District\nCity, State 12345"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "+1 (555) 123-4567\n+1 (555) 123-4568"
+      content: "69 Whitmore Road Small Heath, Birmingham, UK"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@ibnaljazariinstitute.com\nadmissions@ibnaljazariinstitute.com"
+      content: ["ibnaljazariinstitute@gmail.com", "info@ibnaljazariinstitute.org"]
     },
     {
-      icon: Clock,
-      title: "Hours",
-      content: "Mon - Fri: 8:00 AM - 6:00 PM\nSat: 9:00 AM - 4:00 PM\nSun: Closed"
+      icon: Phone,
+      title: "Phone", 
+      content: "+44 740 313 5821"
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-slate-700 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-emerald-800 mb-4">Contact Us</h2>
-          <div className="text-2xl text-emerald-700 mb-6 font-semibold">
-            اتصل بنا
-          </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Get in touch with us for admissions, inquiries, or to learn more about our programs.
+          <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            Get in touch with us for more information about our programs and courses
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-bold text-emerald-800 mb-8">Get in Touch</h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                        <info.icon className="h-5 w-5 text-emerald-700" />
-                      </div>
-                      <CardTitle className="text-emerald-800 text-lg">{info.title}</CardTitle>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {contactInfo.map((info, index) => {
+            const IconComponent = info.icon;
+            return (
+              <Card key={index} className="bg-slate-600 border-slate-500 text-white hover:bg-slate-550 transition-colors duration-300">
+                <CardContent className="p-6 text-center">
+                  <IconComponent className="h-12 w-12 mx-auto mb-4 text-teal-400" />
+                  <h3 className="text-xl font-semibold mb-3">{info.title}</h3>
+                  {Array.isArray(info.content) ? (
+                    <div className="space-y-1">
+                      {info.content.map((item, i) => (
+                        <p key={i} className="text-slate-300">{item}</p>
+                      ))}
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 whitespace-pre-line">{info.content}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+                  ) : (
+                    <p className="text-slate-300">{info.content}</p>
+                  )}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
 
-          {/* Contact Form */}
-          <div>
-            <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-emerald-800 text-2xl">Send us a Message</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="Your first name" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Your last name" />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="your.email@example.com" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="Subject of your message" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <textarea 
-                    id="message" 
-                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Your message here..."
+        <Card className="max-w-2xl mx-auto bg-slate-600 border-slate-500">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl text-white">Send us a Message</CardTitle>
+            <CardDescription className="text-slate-300">
+              We'll get back to you as soon as possible
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-2">
+                    First Name
+                  </label>
+                  <Input 
+                    id="firstName" 
+                    placeholder="Your first name"
+                    className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
                   />
                 </div>
-                
-                <Button className="w-full bg-emerald-700 hover:bg-emerald-800">
-                  Send Message
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-2">
+                    Last Name
+                  </label>
+                  <Input 
+                    id="lastName" 
+                    placeholder="Your last name"
+                    className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                  Email
+                </label>
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="your.email@example.com"
+                  className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                  Subject
+                </label>
+                <Input 
+                  id="subject" 
+                  placeholder="What is this about?"
+                  className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                  Message
+                </label>
+                <Textarea 
+                  id="message" 
+                  rows={5} 
+                  placeholder="Tell us more about your inquiry..."
+                  className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                />
+              </div>
+              
+              <Button type="submit" size="lg" className="w-full bg-teal-600 hover:bg-teal-700">
+                Send Message
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
