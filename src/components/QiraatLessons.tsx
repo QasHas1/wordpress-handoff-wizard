@@ -19,9 +19,40 @@ export const QiraatLessons = () => {
             <p>
               Through long years of learning the knowledge of our teachers and their own massive experiences, we are able to make it easier for our students to get to the necessary advanced levels and be in a position to achieve the highest in the science of Qira'at Al Kuraan Al Kareem.
             </p>
-            <p className="font-semibold text-primary">
+            <p className="font-semibold text-primary mb-4">
               We teach the:
             </p>
+            <div className="text-left max-w-2xl mx-auto space-y-2 text-base">
+              <ul className="list-disc list-inside space-y-1">
+                <li>10 Qira'at Al Soughrah (20 Riwayat)</li>
+                <li>10 Qira'at Al Koubra (20 Riwayat, Higher Qiraat: all the ways of Kitaab Allah, around 1000 ways)</li>
+                <li>Any Qira'at or Riwayat separately.</li>
+                <li>The 10 Qira'at Al Sagheer</li>
+                <li>The Extra 4 Qira'at (over the well known 10 ones)</li>
+                <li>All the books related to Al Qira'at with chain of narrators to their sheikh's authors.</li>
+                <li>All related knowledge linked to Qira'at.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Qiraat Types */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-card p-6 rounded-lg border">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Ten Minor Qira'at recitations</h3>
+            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Ten Major Qira'at recitations</h3>
+            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Ten Sagher Qira'at recitations</h3>
+            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+          </div>
+          <div className="bg-card p-6 rounded-lg border">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Extra Four Qira'at recitations</h3>
+            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
           </div>
         </div>
 

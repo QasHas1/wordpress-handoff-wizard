@@ -7,36 +7,36 @@ export const Courses = () => {
   const tajweedCourses = [
     {
       code: "TAJBEG",
-      title: "Beginner Tajweed Course",
-      description: "Following the outline of the First book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 1'. Completed during a sixth month time period and the student is able to correctly pronounce letters and read the Qur'an with the correct Tajweed when they are certificated.",
-      duration: "6 months",
+      title: "Beginner Tajweed Course (any beginners lessons: Stages of Tajweed...)",
+      description: "The beginner courses will be following the outline of the First book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 1 & Volume 2' published, fortunately, in two languages: Arabic and separately in English. It is completed during a sixth month time period (three months for a condensed course) and the student is able to correctly pronounce all letters and read the Qur'an with the correct Tajweed when they are certificated. Result Guaranteed (in shaa' Allah)",
+      duration: "6 months (3 months condensed)",
       level: "Beginner"
     },
     {
       code: "TAJIN1",
       title: "Intermediate Tajweed Course Level 1",
-      description: "Following the outline of the Second book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 2'. Clarification of the rulings of the Tajweed. Included: Explanation of Tuhfatul Atfal, in parallel with other basics Tajweed poems.",
+      description: "The intermediate course will be following the outline of the Second book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 2'. Published, fortunately, in two languages: Arabic and separately in English. Clarification of the rulings of the Tajweed. Included: Explanation of Tuhfatul Atfal, in parallel with other basics Tajweed poems then innovatively how the rules of Tajweed are scripted in the Noble Qur'an. It is completed during a five month time period and the student is able to correctly practice the basics rules of Tajwod to the verses of the Holly Qur'an. When students are confident with the Tajweed rules they will be tested then certificated to practice for themselves or to teach others. Result Guaranteed (in shaa' Allah)",
       duration: "5 months",
       level: "Intermediate"
     },
     {
       code: "TAJIN2",
       title: "Intermediate Tajweed Course Level 2", 
-      description: "Following the outline of the Third book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 3'. Included: Explanation of Jazaria in full, in parallel with other intermediate Tajweed poems.",
+      description: "The intermediate course will be following the outline of the Third book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 3'. Included: Explanation of Jazaria in full, in parallel with other intermediate Tajweed poems then innovatively, as well, how the rules of Tajweed of this level are scripted in the Noble Qur'an. It is completed during a four month time period and the student is able to correctly practice Tajweed rules to the verses of the Holly Qur'an. When students are confident with the Tajweed rules of this level, they will be tested then certificated to practice for themselves or to teach others.",
       duration: "4 months",
       level: "Intermediate"
     },
     {
       code: "TAJIN3",
       title: "Advanced Intermediate Tajweed Course",
-      description: "Following the outline of the Fourth book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 4'. This a professional level of Tajweed: Qualifying students to know the subtleties of the science of Tajweed, and training them to deliver the Qur'an to the next generation with high accuracy.",
+      description: "The advanced intermediate course will be following the outline of the Fourth book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 4'. This a professional level of Tajweed: Qualifying students to know the subtleties of the science of Tajweed, and training them to deliver the Qur'an to the next generation with high accuracy.",
       duration: "Variable",
       level: "Advanced Intermediate"
     },
     {
       code: "TAJADV",
       title: "Advanced Tajweed Course",
-      description: "Following the outline of the Fifth book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volumes 5'. This a professional level for recapitulation then practicing all Tajweed concepts prementioned.",
+      description: "The advanced course will be following the outline of the Fifth book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volumes 5'. This a professional level for recapitulation then practicing all Tajweed concepts prementioned.",
       duration: "Variable",
       level: "Advanced"
     }
