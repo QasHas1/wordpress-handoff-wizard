@@ -21,15 +21,15 @@ export const Courses = () => {
     },
     {
       code: "TAJIN2",
-      title: "Intermediate Tajweed Course Level 2", 
-      description: "The intermediate course will be following the outline of the Third book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 3'. Included: Explanation of Jazaria in full, in parallel with other intermediate Tajweed poems then innovatively, as well, how the rules of Tajweed of this level are scripted in the Noble Qur'an. It is completed during a four month time period and the student is able to correctly practice Tajweed rules to the verses of the Holly Qur'an. When students are confident with the Tajweed rules of this level, they will be tested then certificated to practice for themselves or to teach others.",
+      title: "Intermediate Tajweed Course Level 2 - Clarification of the rulings of the Tajweed", 
+      description: "This book is a complete curriculum, for students and teachers of the sciences of Tajweed, to learn the basic rulings of Tajweed and apply them at the highest level in the ten Qur'anic Qira'at and what is attributed to them. It also includes practical explanations of the Tuhfat Ul Atfal, and its application on the possible Qira'at. Thus the student can read any Qira'ah of the Holy Qur'an without any fear. The compiler has followed a practical method that brings the meanings closer and makes it easier for the teacher and the students to reach the intended benefit of the poem. An in-depth study of the rules of Tajweed, at the intermediate level, covering all the topics presented in Al-Muqaddimah fi-mā 'alā Qāri'hi 'an Ya'lamah ('Al-Muqaddimah Al-Jazariyyah') of Imam Ibn Jazari : An essential poem for anyone seeking to master the art of reciting the Quran correctly.",
       duration: "4 months",
       level: "Intermediate"
     },
     {
       code: "TAJIN3",
       title: "Advanced Intermediate Tajweed Course",
-      description: "The advanced intermediate course will be following the outline of the Fourth book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 4'. This a professional level of Tajweed: Qualifying students to know the subtleties of the science of Tajweed, and training them to deliver the Qur'an to the next generation with high accuracy.",
+      description: "The intermediate course will be following the outline of the Fourth book of Tajweed, published by Sheikh Abu Hamza: 'The Perfection Before The Certification, Volume 4'. This a professional level of Tajweed: Qualifying students to know the subtleties of the science of Tajweed, and training them to deliver the Qur'an to the next generation with high accuracy.",
       duration: "Variable",
       level: "Advanced Intermediate"
     },

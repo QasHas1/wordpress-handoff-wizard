@@ -4,6 +4,83 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, Award } from "lucide-react";
 
 export const QiraatLessons = () => {
+  const minorQiraatCourses = [
+    { code: "QIRSQ1", title: "Qiraat Naafi' from two riwayats: Qaloun & Warsh" },
+    { code: "QIRS1.1", title: "Qaloun 'an Naafi'" },
+    { code: "QIRS1.2", title: "Warsh 'an Naafi'" },
+    { code: "QIRSQ2", title: "Qiraat Ibn Katheer from two riwayats Al Bazzi & Qunbul" },
+    { code: "QIRS2.1", title: "Riwayat Al Bazzi min Qiraat Ibn Katheer" },
+    { code: "QIRS2.2", title: "Riwayat Qunbul min Qiraat Ibn Katheer" },
+    { code: "QIRSQ3", title: "Qiraat Abu Amr" },
+    { code: "QIRS3.1", title: "Duri by Abu Amr" },
+    { code: "QIRS3.2", title: "Susi by Abu Amr" },
+    { code: "QIRSQ4", title: "Ibn A'amir" },
+    { code: "QIRS4.1", title: "Hisham by Ibn Aamir" },
+    { code: "QIRS4.2", title: "Ibn Thakwaan by Ibn Aamir" },
+    { code: "QIRSQ5", title: "Qiraat Aasim (Shu'bah and Hafs)" },
+    { code: "QIRS5.1", title: "Riwayat Shu'bah 'an Aasim" },
+    { code: "QIRS5.2", title: "Riwayat Hafs 'an Aasim" },
+    { code: "QIRSQ6", title: "Qiraat Hamza (Khalaf and Khallad)" },
+    { code: "QIRS6.1", title: "Riwayat Khalaf 'an Hamza" },
+    { code: "QIRS6.2", title: "Riwayat Khallad 'an Hamza" },
+    { code: "QIRSQ7", title: "Qiraat Kisaa'i" },
+    { code: "QIRS7.1", title: "Qiraat Abi Al Haarith 'an Kisaa'i" },
+    { code: "QIRS7.2", title: "Qiraat Ad- Duri 'an Kisaa'i" },
+    { code: "QIRSQ8", title: "Qiraat Abu Ja'far" },
+    { code: "QIRS8.1", title: "Riwayat Ibn Wardaan 'an Abi Ja'far" },
+    { code: "QIRS8.2", title: "Riwayat Ibn Jammaz 'an Abi Ja'far" },
+    { code: "QIRSQ9", title: "Qiraat Yaqoub" },
+    { code: "QIRS9.1", title: "Riwayat Rowais 'an Yaqoub" },
+    { code: "QIRS9.2", title: "Riwayat Rawh 'an Yaqoub" },
+    { code: "QIRSQ10", title: "Qiraat Khalaf (the 10th)" },
+    { code: "QIRS101", title: "Riwayat Is'haq 'an Khalaf (the 10th)" },
+    { code: "QIRS102", title: "Riwayat Idris 'an Khalaf (the 10th)" }
+  ];
+
+  const groupedMinorCourses = [
+    { code: "QSGR2.8", title: "Qiraat Sughra Grouped QIRSQ2 & QIRSQ8" },
+    { code: "QS1.1.28", title: "Qiraat Sughra Grouped QIRS1.1 & QIRSQ2 & QIRSQ8" },
+    { code: "QSGR1.8", title: "Qiraat Sughra Grouped Al Madanyian: Madina Qiraat QIRSQ1 & QIRSQ8" },
+    { code: "QSGR710", title: "Qiraat Sughra Grouped from Kufi Qiraat QIRSQ7 & QIRSQ10" },
+    { code: "QSGRKU", title: "Qiraat Sughra Grouped Kufi Qiraat QIRSQ5, QIRSQ6, QIRSQ7 & QIRSQ10" },
+    { code: "QSGRA7", title: "Qiraat Sughra Grouped from All 7 Qiraat" },
+    { code: "QSGALL", title: "Qiraat Sughra Grouped from All 10 Qiraat" }
+  ];
+
+  const majorQiraatCourses = [
+    { code: "QIRMQ1", title: "Qiraat Naafi' from two riwayats: Qalun (87 ways), Al Azraq (36 ways) Al Asbahaani (26 ways)" },
+    { code: "QIRM1.1", title: "Qalun 'an Naafi' (All the ways possible)" },
+    { code: "QIRM121", title: "Warsh 'an Naafi' Tareeq Al Azraq (All the ways possible)" },
+    { code: "QIRM122", title: "Warsh 'an Naafi' Tareeq Asbahaani (All the ways possible)" },
+    { code: "QIRMQ2", title: "Qiraat Ibn Katheer from two riwayats Al Bazzi (All the ways possible) & Qunbul (All the ways possible)" },
+    { code: "QIRM2.1", title: "Riwayat Al Bazzi min Qiraat Ibn Katheer : Al Bazzi (All the ways possible)" },
+    { code: "QIRM2.2", title: "Riwayat Qunbul min Qiraat Ibn Katheer: Qunbul (All the ways possible)" },
+    { code: "QIRMQ3", title: "Qiraat Abu Amr (All the ways possible)" },
+    { code: "QIRM3.1", title: "Duri by Abu Amr (All the ways possible)" },
+    { code: "QIRM3.2", title: "Susi by Abu Amr (All the ways possible)" },
+    { code: "QIRMQ4", title: "Ibn A'amir (All the ways possible)" },
+    { code: "QIRM4.1", title: "Hisham by Ibn Aamir (All the ways possible)" },
+    { code: "QIRM4.2", title: "Ibn Thakwaan by Ibn Aamir (All the ways possible)" },
+    { code: "QIRMQ5", title: "Qiraat Aasim (Shu'bah and Hafs) (All the ways possible)" },
+    { code: "QIRM5.1", title: "Riwayat Shu'bah 'an Aasim (All the ways possible)" },
+    { code: "QIRM5.2", title: "Riwayat Hafs 'an Aasim (All the ways possible)" },
+    { code: "QIRMQ6", title: "Qiraat Hamza (Khalaf and Khallad) (All the ways possible)" },
+    { code: "QIRM6.1", title: "Riwayat Khalaf 'an Hamza (All the ways possible)" },
+    { code: "QIRM6.2", title: "Riwayat Khallad 'an Hamza (All the ways possible)" },
+    { code: "QIRMQ7", title: "Qiraat Kisaa'i (All the ways possible)" },
+    { code: "QIRM7.1", title: "Qiraat Abi Al Haarith 'an Kisaa'i (All the ways possible)" },
+    { code: "QIRM7.2", title: "Qiraat Ad- Duri 'an Kisaa'i (All the ways possible)" },
+    { code: "QIRMQ8", title: "Qiraat Abu Ja'far (All the ways possible)" },
+    { code: "QIRM8.1", title: "Riwayat Ibn Wardaan 'an Abi Ja'far (All the ways possible)" },
+    { code: "QIRM8.2", title: "Riwayat Ibn Jammaz 'an Abi Ja'far (All the ways possible)" },
+    { code: "QIRMQ9", title: "Qiraat Yaqoub (All the ways possible)" },
+    { code: "QIRM9.1", title: "Riwayat Rowais 'an Yaqoub (All the ways possible)" },
+    { code: "QIRM9.2", title: "Riwayat Rawh 'an Yaqoub (All the ways possible)" },
+    { code: "QIRMQ10", title: "Qiraat Khalaf (the 10th) (All the ways possible)" },
+    { code: "QIRM101", title: "Riwayat Is'haq 'an Khalaf (the 10th) (All the ways possible)" },
+    { code: "QIRM102", title: "Riwayat Idris 'an Khalaf (the 10th) (All the ways possible)" }
+  ];
+
   return (
     <section id="qiraat" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -36,23 +113,75 @@ export const QiraatLessons = () => {
           </div>
         </div>
 
-        {/* Qiraat Types */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-card p-6 rounded-lg border">
-            <h3 className="text-2xl font-bold mb-4 text-primary">Ten Minor Qira'at recitations</h3>
-            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+        {/* Ten Minor Qira'at Lessons */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold mb-6">Ten minor Qira'āt recitations Lessons:</h3>
+          <p className="text-red-600 mb-8 text-center font-medium">(Please note the desired codes down for the registration process.)</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {minorQiraatCourses.map((course) => (
+              <Card key={course.code} className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="outline" className="text-green-600 border-green-600">
+                    {course.code}
+                  </Badge>
+                </div>
+                <p className="text-sm">{course.title}</p>
+              </Card>
+            ))}
           </div>
-          <div className="bg-card p-6 rounded-lg border">
-            <h3 className="text-2xl font-bold mb-4 text-primary">Ten Major Qira'at recitations</h3>
-            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-semibold mb-4 text-green-600">Grouped Minor Qira'at Courses:</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {groupedMinorCourses.map((course) => (
+                <Card key={course.code} className="p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge variant="outline" className="text-blue-600 border-blue-600">
+                      {course.code}
+                    </Badge>
+                  </div>
+                  <p className="text-sm">{course.title}</p>
+                </Card>
+              ))}
+            </div>
           </div>
-          <div className="bg-card p-6 rounded-lg border">
-            <h3 className="text-2xl font-bold mb-4 text-primary">Ten Sagher Qira'at recitations</h3>
-            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+
+          <div className="text-center">
+            <p className="text-muted-foreground mb-4">
+              Student registration is now open at this link:
+            </p>
+            <Button className="bg-green-500 hover:bg-green-600">
+              Minor Qiraat Registration
+            </Button>
           </div>
-          <div className="bg-card p-6 rounded-lg border">
-            <h3 className="text-2xl font-bold mb-4 text-primary">Extra Four Qira'at recitations</h3>
-            <p className="text-muted-foreground">For more information about this, please follow this link: <span className="text-primary cursor-pointer">Qiraat</span></p>
+        </div>
+
+        {/* Ten Major Qira'at Lessons */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold mb-6">Ten Major Qira'āt recitations Lessons:</h3>
+          <p className="text-red-600 mb-8 text-center font-medium">(Please note the desired codes down for the registration process.)</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {majorQiraatCourses.map((course) => (
+              <Card key={course.code} className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="outline" className="text-purple-600 border-purple-600">
+                    {course.code}
+                  </Badge>
+                </div>
+                <p className="text-sm">{course.title}</p>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-muted-foreground mb-4">
+              Student registration is now open at this link:
+            </p>
+            <Button className="bg-purple-500 hover:bg-purple-600">
+              Major Qiraat Registration
+            </Button>
           </div>
         </div>
 
