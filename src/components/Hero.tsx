@@ -2,8 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Image */}
@@ -29,6 +32,7 @@ export const Hero = () => {
         <Button 
           size="lg" 
           className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
+          onClick={() => navigate('/contact-us')}
         >
           <Send className="mr-2 h-5 w-5" />
           Contact us

@@ -2,8 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Users, GraduationCap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const ArabicLessons = () => {
+  const navigate = useNavigate();
   const arabicCourses = [
     {
       code: "ARILEV",
@@ -138,7 +140,11 @@ export const ArabicLessons = () => {
           <p className="text-muted-foreground mb-4">
             Student registration is now open at this link:
           </p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700">
+          <Button 
+            size="lg" 
+            className="bg-green-600 hover:bg-green-700"
+            onClick={() => navigate('/arabic/arabic-registration')}
+          >
             Arabic Registration
           </Button>
         </div>

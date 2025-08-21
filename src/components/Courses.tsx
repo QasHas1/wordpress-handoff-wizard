@@ -2,8 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Clock, Award } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Courses = () => {
+  const navigate = useNavigate();
   const tajweedCourses = [
     {
       code: "TAJBEG",
@@ -137,7 +139,10 @@ export const Courses = () => {
             <p className="text-muted-foreground mb-4">
               Student registration is now open at this link:
             </p>
-            <Button className="bg-blue-500 hover:bg-blue-600">
+            <Button 
+              className="bg-blue-500 hover:bg-blue-600"
+              onClick={() => navigate('/tajweed/tajweed-registration')}
+            >
               Tajweed Registration
             </Button>
           </div>
@@ -209,7 +214,10 @@ export const Courses = () => {
             <p className="text-muted-foreground mb-4">
               Student registration is now open at this link:
             </p>
-            <Button className="bg-blue-500 hover:bg-blue-600">
+            <Button 
+              className="bg-blue-500 hover:bg-blue-600"
+              onClick={() => navigate('/tajweed/tajweed-registration')}
+            >
               Tajweed Poem Registration
             </Button>
           </div>

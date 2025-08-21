@@ -2,8 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Award, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const HifthLessons = () => {
+  const navigate = useNavigate();
   const hifthCourses = [
     {
       code: "HIFTHBEG",
@@ -128,7 +130,11 @@ export const HifthLessons = () => {
               <p className="text-muted-foreground mb-4">
                 Student registration for Hifth is now open at this link:
               </p>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button 
+                size="lg" 
+                className="bg-green-600 hover:bg-green-700"
+                onClick={() => navigate('/tahfedh/hifthregister')}
+              >
                 Hifth Registration
               </Button>
             </div>

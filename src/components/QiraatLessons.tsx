@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BookOpen, Award, Users, GraduationCap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const QiraatLessons = () => {
   const minorQiraatCourses = [
@@ -92,6 +93,8 @@ export const QiraatLessons = () => {
       <p className="text-sm leading-relaxed">{course.title}</p>
     </Card>
   );
+
+  const navigate = useNavigate();
 
   return (
     <section id="qiraat" className="py-20 bg-background">
@@ -193,7 +196,11 @@ export const QiraatLessons = () => {
             </div>
 
             <div className="text-center pt-6">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+              <Button 
+                size="lg" 
+                className="bg-emerald-600 hover:bg-emerald-700"
+                onClick={() => navigate('/qiraat/minor-qiraat-registration')}
+              >
                 Register for Minor Qira'at
               </Button>
             </div>
@@ -212,7 +219,11 @@ export const QiraatLessons = () => {
             </div>
 
             <div className="text-center pt-6">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+              <Button 
+                size="lg" 
+                className="bg-purple-600 hover:bg-purple-700"
+                onClick={() => navigate('/qiraat/major-qiraat-registration')}
+              >
                 Register for Major Qira'at
               </Button>
             </div>
