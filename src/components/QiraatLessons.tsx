@@ -1,7 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Award } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BookOpen, Award, Users, GraduationCap } from "lucide-react";
 
 export const QiraatLessons = () => {
   const minorQiraatCourses = [
@@ -81,148 +82,189 @@ export const QiraatLessons = () => {
     { code: "QIRM102", title: "Riwayat Idris 'an Khalaf (the 10th) (All the ways possible)" }
   ];
 
+  const CourseCard = ({ course, colorClass }: { course: { code: string; title: string }, colorClass: string }) => (
+    <Card className="p-4 hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-2 mb-2">
+        <Badge variant="outline" className={`${colorClass} font-medium`}>
+          {course.code}
+        </Badge>
+      </div>
+      <p className="text-sm leading-relaxed">{course.title}</p>
+    </Card>
+  );
+
   return (
     <section id="qiraat" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">Qira'at Lessons:</h2>
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              We teach Al Qira'at at the highest level possible, we are proud to have presented many of our students with their Idjazaat or Assaneed to the Messenger of Allah SAWT.
-            </p>
-            <p>
-              Many of our students have moved on to become Sheikhs of Qira'ats themselves or are leading Muslims worldwide in different communities. Some of them received certificates or recommendations to join Official Muslim organisations or universities to finish their studies.
-            </p>
-            <p>
-              Through long years of learning the knowledge of our teachers and their own massive experiences, we are able to make it easier for our students to get to the necessary advanced levels and be in a position to achieve the highest in the science of Qira'at Al Kuraan Al Kareem.
-            </p>
-            <p className="font-semibold text-primary mb-4">
-              We teach the:
-            </p>
-            <div className="text-left max-w-2xl mx-auto space-y-2 text-base">
-              <ul className="list-disc list-inside space-y-1">
-                <li>10 Qira'at Al Soughrah (20 Riwayat)</li>
-                <li>10 Qira'at Al Koubra (20 Riwayat, Higher Qiraat: all the ways of Kitaab Allah, around 1000 ways)</li>
-                <li>Any Qira'at or Riwayat separately.</li>
-                <li>The 10 Qira'at Al Sagheer</li>
-                <li>The Extra 4 Qira'at (over the well known 10 ones)</li>
-                <li>All the books related to Al Qira'at with chain of narrators to their sheikh's authors.</li>
-                <li>All related knowledge linked to Qira'at.</li>
-              </ul>
-            </div>
-          </div>
+        <div className="text-center mb-12">
+          <BookOpen className="h-16 w-16 mx-auto mb-4 text-primary" />
+          <h2 className="text-4xl font-bold mb-4">Qira'at Lessons</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Professional-level Quranic recitation studies with authentic chains of transmission. 
+            Many of our graduates have become certified Sheikhs and are leading communities worldwide.
+          </p>
         </div>
 
-        {/* Ten Minor Qira'at Lessons */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold mb-6">Ten minor Qira'āt recitations Lessons:</h3>
-          <p className="text-red-600 mb-8 text-center font-medium">(Please note the desired codes down for the registration process.)</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            {minorQiraatCourses.map((course) => (
-              <Card key={course.code} className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="outline" className="text-green-600 border-green-600">
-                    {course.code}
-                  </Badge>
-                </div>
-                <p className="text-sm">{course.title}</p>
-              </Card>
-            ))}
-          </div>
+        <Tabs defaultValue="overview" className="w-full">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="overview" className="flex items-center gap-2">
+              <BookOpen className="h-4 w-4" />
+              Overview
+            </TabsTrigger>
+            <TabsTrigger value="minor" className="flex items-center gap-2">
+              <Users className="h-4 w-4" />
+              Minor Qira'at
+            </TabsTrigger>
+            <TabsTrigger value="major" className="flex items-center gap-2">
+              <GraduationCap className="h-4 w-4" />
+              Major Qira'at
+            </TabsTrigger>
+            <TabsTrigger value="advanced" className="flex items-center gap-2">
+              <Award className="h-4 w-4" />
+              Advanced Studies
+            </TabsTrigger>
+          </TabsList>
 
-          <div className="mb-8">
-            <h4 className="text-xl font-semibold mb-4 text-green-600">Grouped Minor Qira'at Courses:</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {groupedMinorCourses.map((course) => (
-                <Card key={course.code} className="p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge variant="outline" className="text-blue-600 border-blue-600">
-                      {course.code}
-                    </Badge>
+          <TabsContent value="overview" className="space-y-8">
+            <Card className="p-8">
+              <CardHeader>
+                <CardTitle className="text-2xl text-center">What We Teach</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-lg text-primary">Core Programs:</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        10 Qira'at Al Soughrah (20 Riwayat)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        10 Qira'at Al Koubra (Higher Qiraat: ~1000 ways)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        Individual Qira'at or Riwayat courses
+                      </li>
+                    </ul>
                   </div>
-                  <p className="text-sm">{course.title}</p>
-                </Card>
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-lg text-primary">Additional Studies:</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        Extra 4 Qira'at beyond the famous 10
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        Classical texts with authenticated chains
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        Complete Qira'at methodology
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="minor" className="space-y-6">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold mb-2">Ten Minor Qira'āt Recitations</h3>
+              <p className="text-red-600 font-medium">(Please note the course codes for registration)</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {minorQiraatCourses.map((course) => (
+                <CourseCard key={course.code} course={course} colorClass="text-emerald-600 border-emerald-600" />
               ))}
             </div>
-          </div>
 
-          <div className="text-center">
-            <p className="text-muted-foreground mb-4">
-              Student registration is now open at this link:
-            </p>
-            <Button className="bg-green-500 hover:bg-green-600">
-              Minor Qiraat Registration
-            </Button>
-          </div>
-        </div>
-
-        {/* Ten Major Qira'at Lessons */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold mb-6">Ten Major Qira'āt recitations Lessons:</h3>
-          <p className="text-red-600 mb-8 text-center font-medium">(Please note the desired codes down for the registration process.)</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            {majorQiraatCourses.map((course) => (
-              <Card key={course.code} className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="outline" className="text-purple-600 border-purple-600">
-                    {course.code}
-                  </Badge>
-                </div>
-                <p className="text-sm">{course.title}</p>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <p className="text-muted-foreground mb-4">
-              Student registration is now open at this link:
-            </p>
-            <Button className="bg-purple-500 hover:bg-purple-600">
-              Major Qiraat Registration
-            </Button>
-          </div>
-        </div>
-
-        {/* This section would continue with the specific Qiraat teachings */}
-        <Card className="max-w-4xl mx-auto">
-          <CardHeader className="text-center">
-            <BookOpen className="h-12 w-12 mx-auto mb-4 text-primary" />
-            <CardTitle className="text-2xl">Advanced Qira'at Studies</CardTitle>
-            <CardDescription className="text-lg">
-              Professional level Quranic recitation with complete chains of transmission
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="space-y-2">
-                <Award className="h-8 w-8 mx-auto text-green-600" />
-                <h4 className="font-semibold">Ijazaat Certification</h4>
-                <p className="text-sm text-muted-foreground">Official authorization to teach</p>
-              </div>
-              <div className="space-y-2">
-                <BookOpen className="h-8 w-8 mx-auto text-blue-600" />
-                <h4 className="font-semibold">Multiple Qira'at</h4>
-                <p className="text-sm text-muted-foreground">Various authentic recitation styles</p>
-              </div>
-              <div className="space-y-2">
-                <Award className="h-8 w-8 mx-auto text-purple-600" />
-                <h4 className="font-semibold">Sanad Chain</h4>
-                <p className="text-sm text-muted-foreground">Direct chain to Prophet Muhammad ﷺ</p>
+            <div className="mt-8">
+              <h4 className="text-xl font-semibold mb-4 text-emerald-600">Grouped Courses:</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {groupedMinorCourses.map((course) => (
+                  <CourseCard key={course.code} course={course} colorClass="text-blue-600 border-blue-600" />
+                ))}
               </div>
             </div>
+
+            <div className="text-center pt-6">
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                Register for Minor Qira'at
+              </Button>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="major" className="space-y-6">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold mb-2">Ten Major Qira'āt Recitations</h3>
+              <p className="text-red-600 font-medium">(Advanced level - All possible ways)</p>
+            </div>
             
-            <p className="text-muted-foreground mb-6">
-              Many of our students have registered with some Islamic universities when Hifth is prerequisited. 
-              Some of them participated in many International competitions getting good positions.
-            </p>
-            
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
-              Learn More About Qira'at Programs
-            </Button>
-          </CardContent>
-        </Card>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {majorQiraatCourses.map((course) => (
+                <CourseCard key={course.code} course={course} colorClass="text-purple-600 border-purple-600" />
+              ))}
+            </div>
+
+            <div className="text-center pt-6">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                Register for Major Qira'at
+              </Button>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="advanced" className="space-y-6">
+            <Card className="p-8">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Advanced Qira'at Studies & Certification</CardTitle>
+                <CardDescription className="text-lg">
+                  Professional level certification with complete chains of transmission
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="text-center space-y-3">
+                    <Award className="h-12 w-12 mx-auto text-emerald-600" />
+                    <h4 className="font-semibold">Ijazaat Certification</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Official authorization to teach with authenticated chains
+                    </p>
+                  </div>
+                  <div className="text-center space-y-3">
+                    <BookOpen className="h-12 w-12 mx-auto text-blue-600" />
+                    <h4 className="font-semibold">Multiple Qira'at Mastery</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Comprehensive study of various authentic recitation styles
+                    </p>
+                  </div>
+                  <div className="text-center space-y-3">
+                    <Users className="h-12 w-12 mx-auto text-purple-600" />
+                    <h4 className="font-semibold">Sanad Chain</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Direct unbroken chain to Prophet Muhammad ﷺ
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-center">
+                  <p className="text-muted-foreground">
+                    Our graduates have registered with Islamic universities worldwide and participated 
+                    in international competitions, achieving distinguished positions.
+                  </p>
+                  
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                    Learn More About Advanced Programs
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
