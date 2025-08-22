@@ -8,17 +8,17 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About Us", href: "#about", isExternal: false },
-    { name: "Courses", href: "#courses", isExternal: false },
-    { name: "Tajweed", href: "#tajweed", isExternal: false },
-    { name: "Hifth", href: "#hifth", isExternal: false },
-    { name: "Qiraat", href: "#qiraat", isExternal: false },
-    { name: "Arabic", href: "#arabic", isExternal: false },
-    { name: "To Register", href: "#register", isExternal: false },
-    { name: "Ijazaat", href: "#ijazaat", isExternal: false },
+    { name: "About Us", href: "/#about", isExternal: false },
+    { name: "Courses", href: "/#courses", isExternal: false },
+    { name: "Tajweed", href: "/#tajweed", isExternal: false },
+    { name: "Hifth", href: "/#hifth", isExternal: false },
+    { name: "Qiraat", href: "/#qiraat", isExternal: false },
+    { name: "Arabic", href: "/#arabic", isExternal: false },
+    { name: "To Register", href: "/#register", isExternal: false },
+    { name: "Ijazaat", href: "/#ijazaat", isExternal: false },
     { name: "Videos", href: "/videos", isExternal: true },
     { name: "Events", href: "/events", isExternal: true },
-    { name: "Contact us", href: "#contact", isExternal: false },
+    { name: "Contact us", href: "/#contact", isExternal: false },
     { name: "Donations انفق ينفق عليك", href: "/donations", isExternal: true }
   ];
 
