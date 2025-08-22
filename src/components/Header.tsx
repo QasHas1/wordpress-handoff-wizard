@@ -17,7 +17,8 @@ export const Header = () => {
     { name: "Ijazaat", href: "#ijazaat" },
     { name: "Videos", href: "#videos" },
     { name: "Events", href: "#events" },
-    { name: "Contact us", href: "#contact" }
+    { name: "Contact us", href: "#contact" },
+    { name: "Donations انفق ينفق عليك", href: "/donations" }
   ];
 
   return (

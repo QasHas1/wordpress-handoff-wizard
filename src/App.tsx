@@ -10,6 +10,7 @@ import QiraatRegistration from "./pages/QiraatRegistration";
 import HifthRegistration from "./pages/HifthRegistration";
 import ArabicRegistration from "./pages/ArabicRegistration";
 import Contact from "./pages/ContactPage";
+import Donations from "./pages/Donations";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/tahfedh/hifthregister" element={<HifthRegistration />} />
           <Route path="/arabic/arabic-registration" element={<ArabicRegistration />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="/donations" element={<Donations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
