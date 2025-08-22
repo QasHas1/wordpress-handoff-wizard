@@ -2,23 +2,24 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About Us", href: "#about" },
-    { name: "Courses", href: "#courses" },
-    { name: "Tajweed", href: "#tajweed" },
-    { name: "Hifth", href: "#hifth" },
-    { name: "Qiraat", href: "#qiraat" },
-    { name: "Arabic", href: "#arabic" },
-    { name: "To Register", href: "#register" },
-    { name: "Ijazaat", href: "#ijazaat" },
-    { name: "Videos", href: "#videos" },
-    { name: "Events", href: "#events" },
-    { name: "Contact us", href: "#contact" },
-    { name: "Donations انفق ينفق عليك", href: "/donations" }
+    { name: "About Us", href: "#about", isExternal: false },
+    { name: "Courses", href: "#courses", isExternal: false },
+    { name: "Tajweed", href: "#tajweed", isExternal: false },
+    { name: "Hifth", href: "#hifth", isExternal: false },
+    { name: "Qiraat", href: "#qiraat", isExternal: false },
+    { name: "Arabic", href: "#arabic", isExternal: false },
+    { name: "To Register", href: "#register", isExternal: false },
+    { name: "Ijazaat", href: "#ijazaat", isExternal: false },
+    { name: "Videos", href: "/videos", isExternal: true },
+    { name: "Events", href: "/events", isExternal: true },
+    { name: "Contact us", href: "#contact", isExternal: false },
+    { name: "Donations انفق ينفق عليك", href: "/donations", isExternal: true }
   ];
 
   return (
@@ -39,13 +40,23 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
-              >
-                {item.name}
-              </a>
+              item.isExternal ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </nav>
 
@@ -65,14 +76,25 @@ export const Header = () => {
           <div className="lg:hidden py-4 border-t border-slate-600">
             <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.isExternal ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </nav>
           </div>
