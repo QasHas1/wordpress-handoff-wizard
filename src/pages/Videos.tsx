@@ -12,6 +12,76 @@ const Videos = () => {
       id: "TJfwBZMHHbs",
       title: "International Al Quran Memorisation Assembly 2019",
       description: "The first winner of the international Quran competition in Malaysia – 2019, Mohamed Abdi, Masha'allah, was one of our students that remained with us for a long period of time."
+    },
+    {
+      id: "lmVtilwfMXw",
+      title: "Student Achievement Video 3",
+      description: "Another showcase of our students' achievements and educational progress at Ibn Al Jazari Institute."
+    },
+    {
+      id: "KP6MYOIonmM",
+      title: "Student Achievement Video 4",
+      description: "Continued documentation of our students' journey in Quran studies and Islamic education."
+    },
+    {
+      id: "Sog610YuqBE",
+      title: "Student Achievement Video 5",
+      description: "More examples of the excellence achieved by our students in their Islamic studies."
+    },
+    {
+      id: "H_z4QOH4PI0",
+      title: "Student Achievement Video 6",
+      description: "Further evidence of the high standards maintained at Ibn Al Jazari Institute."
+    },
+    {
+      id: "gdpB51V8yso",
+      title: "Student Achievement Video 7",
+      description: "Additional footage showcasing our educational methodology and student outcomes."
+    },
+    {
+      id: "nfJMZX-zYg8",
+      title: "Student Achievement Video 8",
+      description: "More demonstrations of our students' proficiency in Quran recitation and memorization."
+    },
+    {
+      id: "Fysb5NQb6Gs",
+      title: "Student Achievement Video 9",
+      description: "Continuing our documentation of student success stories and achievements."
+    },
+    {
+      id: "kIpT0gU1iTA",
+      title: "Student Achievement Video 10",
+      description: "Further examples of the quality education provided at our institute."
+    },
+    {
+      id: "1TDvGTqGjiE",
+      title: "Student Achievement Video 11",
+      description: "More showcases of our students' dedication and accomplishments in Islamic studies."
+    },
+    {
+      id: "ebEzc98qpYE",
+      title: "Student Achievement Video 12",
+      description: "Additional evidence of the comprehensive education offered at Ibn Al Jazari Institute."
+    },
+    {
+      id: "IynsPn7Iq0o",
+      title: "Student Achievement Video 13",
+      description: "More documentation of our students' journey in Quran memorization and Islamic scholarship."
+    },
+    {
+      id: "ubFewpqjOXw",
+      title: "Student Achievement Video 14",
+      description: "Further examples of the academic excellence achieved by our students."
+    },
+    {
+      id: "5NIv6r7diGk",
+      title: "Student Achievement Video 15",
+      description: "Continued showcase of our educational programs and student achievements."
+    },
+    {
+      id: "A6zoqKEkcv8",
+      title: "Student Achievement Video 16",
+      description: "Final addition to our collection of student success stories and educational highlights."
     }
   ];
 
