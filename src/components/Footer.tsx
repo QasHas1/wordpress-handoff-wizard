@@ -1,3 +1,5 @@
+import { Youtube, Instagram, Twitter, Facebook, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
   return (
@@ -19,23 +21,72 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="hover:text-yellow-300 transition-colors">About Us</a></li>
-              <li><a href="#programs" className="hover:text-yellow-300 transition-colors">Programs</a></li>
-              <li><a href="#admissions" className="hover:text-yellow-300 transition-colors">Admissions</a></li>
-              <li><a href="#faculty" className="hover:text-yellow-300 transition-colors">Faculty</a></li>
-              <li><a href="#contact" className="hover:text-yellow-300 transition-colors">Contact</a></li>
+              <li><a href="/" className="hover:text-yellow-300 transition-colors">Home</a></li>
+              <li><a href="/about" className="hover:text-yellow-300 transition-colors">About Us</a></li>
+              <li><a href="/#courses" className="hover:text-yellow-300 transition-colors">Courses</a></li>
+              <li><a href="/videos" className="hover:text-yellow-300 transition-colors">Videos</a></li>
+              <li><a href="/events" className="hover:text-yellow-300 transition-colors">Events</a></li>
+              <li><a href="/#contact" className="hover:text-yellow-300 transition-colors">Contact</a></li>
             </ul>
           </div>
 
-          {/* Islamic Quote */}
+          {/* Social Media & WhatsApp */}
           <div>
-            <h4 className="font-semibold mb-4">Wisdom</h4>
-            <blockquote className="text-sm opacity-90 italic">
-              <p className="mb-2">"The best of people are those who learn and teach others."</p>
-              <p className="text-yellow-300">- Prophet Muhammad (ﷺ)</p>
-            </blockquote>
-            <div className="mt-4 text-2xl opacity-60">
-              ﷽
+            <h4 className="font-semibold mb-4">Connect With Us</h4>
+            <div className="flex gap-3 mb-6">
+              <a 
+                href="https://www.youtube.com/channel/UCzUyAwv-VQhZk4dvwSA8rIg?view_as=subscriber" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-yellow-300 transition-colors"
+              >
+                <Youtube className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/ibnaljazariinstitute/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-yellow-300 transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://x.com/ibnaljazariinst" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-yellow-300 transition-colors"
+              >
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://www.facebook.com/IbnAljazariinstitute" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-yellow-300 transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+            </div>
+            
+            <div className="bg-emerald-700 rounded-lg p-4">
+              <h5 className="font-semibold mb-2 flex items-center gap-2">
+                <MessageCircle className="h-5 w-5" />
+                Join Our WhatsApp
+              </h5>
+              <p className="text-xs mb-3 opacity-90">Get updates and announcements</p>
+              <Button 
+                asChild
+                size="sm"
+                className="w-full bg-green-600 hover:bg-green-700 text-white"
+              >
+                <a 
+                  href="https://chat.whatsapp.com/KTtCAwAQsf4IrFEldv58vA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Join Chat
+                </a>
+              </Button>
             </div>
           </div>
         </div>

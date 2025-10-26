@@ -1,25 +1,34 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import instituteLogo from "@/assets/institute-logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "About Us", href: "/#about", isExternal: false },
-    { name: "Courses", href: "/#courses", isExternal: false },
-    { name: "Tajweed", href: "/#tajweed", isExternal: false },
-    { name: "Hifth", href: "/#hifth", isExternal: false },
-    { name: "Qiraat", href: "/#qiraat", isExternal: false },
-    { name: "Arabic", href: "/#arabic", isExternal: false },
-    { name: "To Register", href: "/#register", isExternal: false },
-    { name: "Ijazaat", href: "/#ijazaat", isExternal: false },
+    { name: "Home", href: "/", isExternal: true },
+    { name: "About Us", href: "/about", isExternal: true },
     { name: "Videos", href: "/videos", isExternal: true },
     { name: "Events", href: "/events", isExternal: true },
     { name: "Contact us", href: "/#contact", isExternal: false },
     { name: "Donations انفق ينفق عليك", href: "/donations", isExternal: true }
+  ];
+
+  const courseItems = [
+    { name: "Tajweed", href: "/#tajweed" },
+    { name: "Hifth", href: "/#hifth" },
+    { name: "Qiraat", href: "/#qiraat" },
+    { name: "Arabic", href: "/#arabic" },
+    { name: "Ijazaat", href: "/#ijazaat" }
   ];
 
   return (
@@ -27,15 +36,9 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-teal-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">IJ</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-teal-300">IBN AL JAZARI</h1>
-              <p className="text-xs text-slate-300">INSTITUTE</p>
-            </div>
-          </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={instituteLogo} alt="Ibn Al-Jazari Institute" className="h-12" />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
@@ -58,6 +61,22 @@ export const Header = () => {
                 </a>
               )
             ))}
+            
+            {/* Courses Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm hover:text-teal-300 transition-colors duration-200 flex items-center gap-1">
+                Courses <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {courseItems.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <a href={item.href} className="cursor-pointer">
+                      {item.name}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -95,6 +114,19 @@ export const Header = () => {
                     {item.name}
                   </a>
                 )
+              ))}
+              
+              {/* Mobile Courses Section */}
+              <div className="text-sm font-semibold text-teal-300 px-2 pt-2">Courses</div>
+              {courseItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm hover:text-teal-300 transition-colors duration-200 px-4 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
               ))}
             </nav>
           </div>
