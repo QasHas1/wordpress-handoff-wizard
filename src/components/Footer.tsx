@@ -5,6 +5,14 @@ export const Footer = () => {
   return (
     <footer className="bg-emerald-800 text-white py-12">
       <div className="container mx-auto px-4">
+        {/* Prophet's Saying */}
+        <div className="text-center mb-8 pb-8 border-b border-emerald-700">
+          <p className="text-lg italic opacity-90 max-w-3xl mx-auto">
+            "The best among you are those who learn the Quran and teach it."
+          </p>
+          <p className="text-sm mt-2 opacity-75">- Prophet Muhammad ﷺ (Sahih Al-Bukhari)</p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {/* Institute Info */}
           <div>
@@ -24,23 +32,24 @@ export const Footer = () => {
               <li><a href="/" className="hover:text-yellow-300 transition-colors">Home</a></li>
               <li><a href="/about" className="hover:text-yellow-300 transition-colors">About Us</a></li>
               <li><a href="/#courses" className="hover:text-yellow-300 transition-colors">Courses</a></li>
-              <li><a href="/videos" className="hover:text-yellow-300 transition-colors">Videos</a></li>
+              <li><a href="/videos" className="hover:text-yellow-300 transition-colors">Achievements</a></li>
               <li><a href="/events" className="hover:text-yellow-300 transition-colors">Events</a></li>
-              <li><a href="/#contact" className="hover:text-yellow-300 transition-colors">Contact</a></li>
+              <li><a href="/contact-us" className="hover:text-yellow-300 transition-colors">Contact Us</a></li>
+              <li><a href="/donations" className="hover:text-yellow-300 transition-colors">Donations</a></li>
             </ul>
           </div>
 
           {/* Social Media & WhatsApp */}
           <div>
             <h4 className="font-semibold mb-4">Connect With Us</h4>
-            <div className="flex gap-3 mb-6">
+            <div className="flex gap-4 mb-6">
               <a 
                 href="https://www.youtube.com/channel/UCzUyAwv-VQhZk4dvwSA8rIg?view_as=subscriber" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Youtube className="h-6 w-6" />
+                <Youtube className="h-7 w-7" />
               </a>
               <a 
                 href="https://www.instagram.com/ibnaljazariinstitute/" 
@@ -48,7 +57,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Instagram className="h-6 w-6" />
+                <Instagram className="h-7 w-7" />
               </a>
               <a 
                 href="https://x.com/ibnaljazariinst" 
@@ -56,7 +65,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Twitter className="h-6 w-6" />
+                <Twitter className="h-7 w-7" />
               </a>
               <a 
                 href="https://www.facebook.com/IbnAljazariinstitute" 
@@ -64,7 +73,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Facebook className="h-6 w-6" />
+                <Facebook className="h-7 w-7" />
               </a>
             </div>
             

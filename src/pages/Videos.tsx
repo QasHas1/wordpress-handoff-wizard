@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const Videos = () => {
-  const videos = [
+  const studentAchievements = [
     {
       id: "klNuAXYC3CQ",
       title: "Fajr Prayer Mohammad Jamac",
@@ -15,73 +15,81 @@ const Videos = () => {
     },
     {
       id: "lmVtilwfMXw",
-      title: "Student Achievement Video 3",
-      description: "Another showcase of our students' achievements and educational progress at Ibn Al Jazari Institute."
+      title: "International Al Quran Memorisation Assembly 2019",
+      description: "Again this is during the International Al Quran Memorisation Assembly 2019."
     },
     {
       id: "KP6MYOIonmM",
-      title: "Student Achievement Video 4",
-      description: "Continued documentation of our students' journey in Quran studies and Islamic education."
+      title: "Student Recitation",
+      description: "Our student Mohamed Fareh gave a beautiful recitation here:"
     },
     {
       id: "Sog610YuqBE",
-      title: "Student Achievement Video 5",
-      description: "More examples of the excellence achieved by our students in their Islamic studies."
+      title: "Student Teaching Journey",
+      description: "Here is another student who has taken the path of teaching and has given lessons in a local Masjid, may Allah SWT reward us all, Aameen."
     },
     {
+      id: "n3jK69U1ezE",
+      title: "Sheikh Imam Abdul Rahman",
+      description: "In the following video, Sheikh Imam Abdul Rahman is leading in a local Masjid, he is one of our first students to accomplish an Idjazaat in multiple Qira'at, Mashaa'allah SWT:"
+    }
+  ];
+
+  const tajweedVideos = [
+    {
       id: "H_z4QOH4PI0",
-      title: "Student Achievement Video 6",
-      description: "Further evidence of the high standards maintained at Ibn Al Jazari Institute."
+      title: "Tajweed Lesson 1",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "gdpB51V8yso",
-      title: "Student Achievement Video 7",
-      description: "Additional footage showcasing our educational methodology and student outcomes."
+      title: "Tajweed Lesson 2",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "nfJMZX-zYg8",
-      title: "Student Achievement Video 8",
-      description: "More demonstrations of our students' proficiency in Quran recitation and memorization."
+      title: "Tajweed Lesson 3",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "Fysb5NQb6Gs",
-      title: "Student Achievement Video 9",
-      description: "Continuing our documentation of student success stories and achievements."
+      title: "Tajweed Lesson 4",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "kIpT0gU1iTA",
-      title: "Student Achievement Video 10",
-      description: "Further examples of the quality education provided at our institute."
+      title: "Tajweed Lesson 5",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "1TDvGTqGjiE",
-      title: "Student Achievement Video 11",
-      description: "More showcases of our students' dedication and accomplishments in Islamic studies."
+      title: "Tajweed Lesson 6",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "ebEzc98qpYE",
-      title: "Student Achievement Video 12",
-      description: "Additional evidence of the comprehensive education offered at Ibn Al Jazari Institute."
+      title: "Tajweed Lesson 7",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "IynsPn7Iq0o",
-      title: "Student Achievement Video 13",
-      description: "More documentation of our students' journey in Quran memorization and Islamic scholarship."
+      title: "Tajweed Lesson 8",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "ubFewpqjOXw",
-      title: "Student Achievement Video 14",
-      description: "Further examples of the academic excellence achieved by our students."
+      title: "Tajweed Lesson 9",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "5NIv6r7diGk",
-      title: "Student Achievement Video 15",
-      description: "Continued showcase of our educational programs and student achievements."
+      title: "Tajweed Lesson 10",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     },
     {
       id: "A6zoqKEkcv8",
-      title: "Student Achievement Video 16",
-      description: "Final addition to our collection of student success stories and educational highlights."
+      title: "Tajweed Lesson 11",
+      description: "Tajweed lessons with Sheikh Abu Hamzah Al Maghribi."
     }
   ];
 
@@ -90,40 +98,73 @@ const Videos = () => {
       <Header />
       
       <main className="pt-20 pb-16">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Videos</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">Achievements</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Here are some videos related to our activity and achievements of our students
             </p>
           </div>
 
-          <div className="grid gap-8 md:gap-12">
-            {videos.map((video, index) => (
-              <div key={video.id} className="bg-card rounded-lg shadow-lg p-6">
-                <div className="aspect-video mb-6">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={video.title}
-                    className="w-full h-full rounded-lg"
-                    allowFullScreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  />
+          {/* Student Achievements Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Video and Student Achievements</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {studentAchievements.map((video) => (
+                <div key={video.id} className="bg-card rounded-lg shadow-lg p-4">
+                  <div className="aspect-video mb-4">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.title}
+                      className="w-full h-full rounded-lg"
+                      allowFullScreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {video.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {video.description}
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-foreground">
-                    {video.title}
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {video.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </section>
 
-          <div className="mt-16 text-center">
+          {/* Tajweed Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Tajweed with Sheikh Abu Hamzah Al Maghribi</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tajweedVideos.map((video) => (
+                <div key={video.id} className="bg-card rounded-lg shadow-lg p-4">
+                  <div className="aspect-video mb-4">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.title}
+                      className="w-full h-full rounded-lg"
+                      allowFullScreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {video.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {video.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="text-center">
             <div className="bg-muted/50 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-foreground mb-4">
                 More Videos Coming Soon

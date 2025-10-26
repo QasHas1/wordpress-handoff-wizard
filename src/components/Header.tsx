@@ -17,10 +17,10 @@ export const Header = () => {
   const navItems = [
     { name: "Home", href: "/", isExternal: true },
     { name: "About Us", href: "/about", isExternal: true },
-    { name: "Videos", href: "/videos", isExternal: true },
+    { name: "Achievements", href: "/videos", isExternal: true },
     { name: "Events", href: "/events", isExternal: true },
-    { name: "Contact us", href: "/#contact", isExternal: false },
-    { name: "Donations انفق ينفق عليك", href: "/donations", isExternal: true }
+    { name: "Contact Us", href: "/contact-us", isExternal: true },
+    { name: "Donations", href: "/donations", isExternal: true }
   ];
 
   const courseItems = [
