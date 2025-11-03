@@ -3,22 +3,22 @@ import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="bg-emerald-800 text-white py-12">
+    <footer className="bg-emerald-800 text-white py-8">
       <div className="container mx-auto px-4">
         {/* Prophet's Saying */}
-        <div className="text-center mb-8 pb-8 border-b border-emerald-700">
-          <p className="text-lg italic opacity-90 max-w-3xl mx-auto">
+        <div className="text-center mb-6 pb-6 border-b border-emerald-700">
+          <p className="text-base italic opacity-90 max-w-3xl mx-auto">
             "The best among you are those who learn the Quran and teach it."
           </p>
-          <p className="text-sm mt-2 opacity-75">- Prophet Muhammad ﷺ (Sahih Al-Bukhari)</p>
+          <p className="text-xs mt-1 opacity-75">- Prophet Muhammad ﷺ (Sahih Al-Bukhari)</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {/* Institute Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Ibn Al-Jazari Institute</h3>
-            <div className="text-lg mb-2 opacity-90">معهد ابن الجزري</div>
-            <p className="text-sm opacity-80 leading-relaxed">
+            <h3 className="text-lg font-bold mb-3">Ibn Al-Jazari Institute</h3>
+            <div className="text-base mb-2 opacity-90">معهد ابن الجزري</div>
+            <p className="text-xs opacity-80 leading-relaxed">
               Dedicated to preserving and transmitting authentic Islamic knowledge 
               through excellence in education, following the methodology of the 
               righteous predecessors.
@@ -27,8 +27,8 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold mb-3 text-sm">Quick Links</h4>
+            <ul className="space-y-1.5 text-xs">
               <li><a href="/" className="hover:text-yellow-300 transition-colors">Home</a></li>
               <li><a href="/about" className="hover:text-yellow-300 transition-colors">About Us</a></li>
               <li><a href="/#courses" className="hover:text-yellow-300 transition-colors">Courses</a></li>
@@ -41,15 +41,15 @@ export const Footer = () => {
 
           {/* Social Media & WhatsApp */}
           <div>
-            <h4 className="font-semibold mb-4">Connect With Us</h4>
-            <div className="flex gap-4 mb-6">
+            <h4 className="font-semibold mb-3 text-sm">Connect With Us</h4>
+            <div className="flex gap-3 mb-4">
               <a 
                 href="https://www.youtube.com/channel/UCzUyAwv-VQhZk4dvwSA8rIg?view_as=subscriber" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Youtube className="h-7 w-7" />
+                <Youtube className="h-5 w-5" />
               </a>
               <a 
                 href="https://www.instagram.com/ibnaljazariinstitute/" 
@@ -57,7 +57,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Instagram className="h-7 w-7" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a 
                 href="https://x.com/ibnaljazariinst" 
@@ -65,7 +65,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Twitter className="h-7 w-7" />
+                <Twitter className="h-5 w-5" />
               </a>
               <a 
                 href="https://www.facebook.com/IbnAljazariinstitute" 
@@ -73,16 +73,16 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors"
               >
-                <Facebook className="h-7 w-7" />
+                <Facebook className="h-5 w-5" />
               </a>
             </div>
             
-            <div className="bg-emerald-700 rounded-lg p-4">
-              <h5 className="font-semibold mb-2 flex items-center gap-2">
-                <MessageCircle className="h-5 w-5" />
+            <div className="bg-emerald-700 rounded-lg p-3">
+              <h5 className="font-semibold mb-1.5 flex items-center gap-2 text-sm">
+                <MessageCircle className="h-4 w-4" />
                 Join Our WhatsApp
               </h5>
-              <p className="text-xs mb-3 opacity-90">Get updates and announcements</p>
+              <p className="text-xs mb-2 opacity-90">Get updates and announcements</p>
               <Button 
                 asChild
                 size="sm"
@@ -100,7 +100,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-emerald-700 mt-8 pt-8 text-center text-sm opacity-80">
+        <div className="border-t border-emerald-700 mt-6 pt-6 text-center text-xs opacity-80">
           <p>&copy; 2024 Ibn Al-Jazari Institute. All rights reserved.</p>
         </div>
       </div>

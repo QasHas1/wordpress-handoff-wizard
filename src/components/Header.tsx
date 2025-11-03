@@ -23,6 +23,8 @@ export const Header = () => {
     { name: "Donations", href: "/donations", isExternal: true }
   ];
 
+  const coursesPosition = 2; // Insert courses after "About Us"
+
   const courseItems = [
     { name: "Tajweed", href: "/#tajweed" },
     { name: "Hifth", href: "/#hifth" },
@@ -42,7 +44,7 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) => (
+            {navItems.slice(0, coursesPosition).map((item) => (
               item.isExternal ? (
                 <Link
                   key={item.name}
@@ -77,6 +79,26 @@ export const Header = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {navItems.slice(coursesPosition).map((item) => (
+              item.isExternal ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
+                >
+                  {item.name}
+                </a>
+              )
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -94,7 +116,7 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-slate-600">
             <nav className="flex flex-col space-y-3">
-              {navItems.map((item) => (
+              {navItems.slice(0, coursesPosition).map((item) => (
                 item.isExternal ? (
                   <Link
                     key={item.name}
@@ -127,6 +149,28 @@ export const Header = () => {
                 >
                   {item.name}
                 </a>
+              ))}
+
+              {navItems.slice(coursesPosition).map((item) => (
+                item.isExternal ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </nav>
           </div>
