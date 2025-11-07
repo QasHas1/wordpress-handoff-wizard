@@ -1,11 +1,61 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Phone } from "lucide-react";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/components/ui/use-toast";
 
 export const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_0wlw351',
+        'template_21cs8qp',
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        },
+        'LSo4YgAAwR0YN_rHk'
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -65,28 +115,20 @@ export const Contact = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-2">
-                    First Name
-                  </label>
-                  <Input 
-                    id="firstName" 
-                    placeholder="Your first name"
-                    className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-2">
-                    Last Name
-                  </label>
-                  <Input 
-                    id="lastName" 
-                    placeholder="Your last name"
-                    className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
-                  />
-                </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                  Name
+                </label>
+                <Input 
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your full name"
+                  className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                  required
+                />
               </div>
               
               <div>
@@ -94,21 +136,14 @@ export const Contact = () => {
                   Email
                 </label>
                 <Input 
-                  id="email" 
-                  type="email" 
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="your.email@example.com"
                   className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
-                  Subject
-                </label>
-                <Input 
-                  id="subject" 
-                  placeholder="What is this about?"
-                  className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                  required
                 />
               </div>
               
@@ -117,15 +152,24 @@ export const Contact = () => {
                   Message
                 </label>
                 <Textarea 
-                  id="message" 
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={5} 
                   placeholder="Tell us more about your inquiry..."
                   className="bg-slate-700 border-slate-500 text-white placeholder:text-slate-400"
+                  required
                 />
               </div>
               
-              <Button type="submit" size="lg" className="w-full bg-teal-600 hover:bg-teal-700">
-                Send Message
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full bg-teal-600 hover:bg-teal-700"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </CardContent>
