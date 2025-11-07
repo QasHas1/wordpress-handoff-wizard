@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Registration } from "@/components/Registration";
 
 const TajweedRegistration = () => {
+  useEffect(() => {
+    document.title = "Tajweed Registration - Ibn Al-Jazari Institute";
+  }, []);
   const tajweedCourses = [
     "TAJBEG - Beginner Tajweed",
     "TAJINT - Intermediate Tajweed", 

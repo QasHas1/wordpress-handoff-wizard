@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Registration } from "@/components/Registration";
 
 const HifthRegistration = () => {
+  useEffect(() => {
+    document.title = "Hifth Registration - Ibn Al-Jazari Institute";
+  }, []);
   const hifthCourses = [
     "HIFTHBEG - Beginner Hifth (Juz 30)",
     "HIFTHINT - Intermediate Hifth (10 Juz)",

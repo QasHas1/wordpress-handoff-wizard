@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
 const Donations = () => {
+  useEffect(() => {
+    document.title = "Donations - Ibn Al-Jazari Institute";
+  }, []);
+
   const [selectedAmount, setSelectedAmount] = useState<number | string>(5);
   const [customAmount, setCustomAmount] = useState("");
   const [frequency, setFrequency] = useState("One-time");

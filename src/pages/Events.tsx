@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const Events = () => {
+  useEffect(() => {
+    document.title = "Events - Ibn Al-Jazari Institute";
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Header />

@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const Videos = () => {
+  useEffect(() => {
+    document.title = "Achievements - Ibn Al-Jazari Institute";
+  }, []);
   const studentAchievements = [
     {
       id: "klNuAXYC3CQ",
