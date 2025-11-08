@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 
 const CoursesPage = () => {
   useEffect(() => {
-    document.title = "Ibn Al-Jazari Institute - Courses";
+    document.title = "Ibn Al-Jazari Institute - Overview";
   }, []);
 
   return (

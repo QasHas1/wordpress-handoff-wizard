@@ -95,10 +95,6 @@ export const Courses = () => {
   return (
     <section id="courses" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">Courses Overview</h2>
-        </div>
-
         {/* Tajweed Lessons */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 text-center">Tajweed</h3>
