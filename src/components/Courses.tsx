@@ -96,7 +96,7 @@ export const Courses = () => {
     <section id="courses" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">Courses</h2>
+          <h2 className="text-4xl font-bold mb-6">Courses Overview</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             In Ibn Al Jazari Institute we have a long experience in teaching Tajweed, many of our students are currently teaching others in the community or around the world. Our courses for Tajweed are for all tiers: Beginner, Intermediate and Advanced:
           </p>
