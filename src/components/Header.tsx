@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import instituteLogo from "@/assets/institute-logo.png";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,17 +100,23 @@ export const Header = () => {
                 </a>
               )
             ))}
+            
+            {/* Theme Toggle */}
+            <ThemeToggle />
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="lg:hidden text-white hover:bg-slate-600"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+          {/* Mobile Menu and Theme Toggle */}
+          <div className="lg:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white hover:bg-slate-600"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

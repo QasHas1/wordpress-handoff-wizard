@@ -2,10 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, Globe, Youtube, Instagram, Twitter, Facebook } from "lucide-react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -60,18 +60,37 @@ export const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "69 Whitmore Road Small Heath, Birmingham, UK"
+      content: "69 Whitmore Road Small Heath, Birmingham, UK",
+      isLink: false
     },
     {
       icon: Mail,
       title: "Email",
-      content: ["ibnaljazariinstitute@gmail.com", "info@ibnaljazariinstitute.org"]
+      content: ["ibnaljazariinstitute@gmail.com", "info@ibnaljazariinstitute.org"],
+      isLink: true,
+      linkType: "mailto"
     },
     {
       icon: Phone,
       title: "Phone", 
-      content: "+44 740 313 5821"
+      content: "+44 740 313 5821",
+      isLink: true,
+      linkType: "tel"
     }
+  ];
+
+  const businessHours = [
+    { day: "Monday - Thursday", hours: "7:30 am - 7:30 pm" },
+    { day: "Friday", hours: "Closed" },
+    { day: "Saturday", hours: "8 am - 3:30 pm" },
+    { day: "Sunday", hours: "8 am - 4:30 pm" }
+  ];
+
+  const socialLinks = [
+    { icon: Youtube, url: "https://www.youtube.com/channel/UCzUyAwv-VQhZk4dvwSA8rIg?view_as=subscriber", label: "YouTube" },
+    { icon: Instagram, url: "https://www.instagram.com/ibnaljazariinstitute/", label: "Instagram" },
+    { icon: Twitter, url: "https://x.com/ibnaljazariinst", label: "Twitter" },
+    { icon: Facebook, url: "https://www.facebook.com/IbnAljazariinstitute", label: "Facebook" }
   ];
 
   return (
@@ -88,23 +107,116 @@ export const Contact = () => {
           {contactInfo.map((info, index) => {
             const IconComponent = info.icon;
             return (
-              <Card key={index} className="bg-slate-600 border-slate-500 text-white hover:bg-slate-550 transition-colors duration-300">
+              <Card key={index} className="bg-slate-600 border-slate-500 text-white hover:bg-slate-550 transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6 text-center">
                   <IconComponent className="h-12 w-12 mx-auto mb-4 text-teal-400" />
                   <h3 className="text-xl font-semibold mb-3">{info.title}</h3>
                   {Array.isArray(info.content) ? (
                     <div className="space-y-1">
                       {info.content.map((item, i) => (
-                        <p key={i} className="text-slate-300">{item}</p>
+                        info.isLink ? (
+                          <a 
+                            key={i} 
+                            href={`${info.linkType}:${item}`}
+                            className="block text-slate-300 hover:text-teal-400 transition-colors duration-300"
+                          >
+                            {item}
+                          </a>
+                        ) : (
+                          <p key={i} className="text-slate-300">{item}</p>
+                        )
                       ))}
                     </div>
                   ) : (
-                    <p className="text-slate-300">{info.content}</p>
+                    info.isLink ? (
+                      <a 
+                        href={`${info.linkType}:${info.content}`}
+                        className="text-slate-300 hover:text-teal-400 transition-colors duration-300"
+                      >
+                        {info.content}
+                      </a>
+                    ) : (
+                      <p className="text-slate-300">{info.content}</p>
+                    )
                   )}
                 </CardContent>
               </Card>
             );
           })}
+        </div>
+
+        {/* Business Hours and Connect With Us */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* Business Hours */}
+          <Card className="bg-slate-600 border-slate-500">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Clock className="h-6 w-6 text-teal-400" />
+                Business Hours
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {businessHours.map((schedule, index) => (
+                <div 
+                  key={index} 
+                  className="flex justify-between items-center py-2 border-b border-slate-500 last:border-0 hover:bg-slate-550 transition-colors duration-300 px-2 rounded"
+                >
+                  <span className="text-slate-300 font-medium">{schedule.day}</span>
+                  <span className={schedule.hours === "Closed" ? "text-red-400" : "text-teal-400"}>
+                    {schedule.hours}
+                  </span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Connect With Us */}
+          <Card className="bg-slate-600 border-slate-500">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Globe className="h-6 w-6 text-teal-400" />
+                Connect With Us
+              </CardTitle>
+              <CardDescription className="text-slate-300">
+                Follow us on social media for the latest updates and insights
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex gap-4 justify-center">
+                {socialLinks.map((social, index) => {
+                  const SocialIcon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-slate-700 p-3 rounded-full hover:bg-teal-600 transition-all duration-300 hover:scale-110"
+                      aria-label={social.label}
+                    >
+                      <SocialIcon className="h-6 w-6 text-white" />
+                    </a>
+                  );
+                })}
+              </div>
+              <div className="border-t border-slate-500 pt-4 space-y-2">
+                <div className="flex items-center gap-2 text-slate-300 hover:text-teal-400 transition-colors duration-300">
+                  <Mail className="h-4 w-4" />
+                  <span className="text-sm">Quick inquiries:</span>
+                  <a href="mailto:info@ibnaljazariinstitute.org" className="text-sm hover:underline">
+                    info@ibnaljazariinstitute.org
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-slate-300 hover:text-teal-400 transition-colors duration-300">
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm">Urgent matters:</span>
+                  <a href="tel:+447403135821" className="text-sm hover:underline">
+                    +44 740 313 5821
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <Card className="max-w-2xl mx-auto bg-slate-600 border-slate-500">
