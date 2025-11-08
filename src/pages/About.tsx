@@ -12,8 +12,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <WhatWeTeach />
       <AboutSection />
+      <WhatWeTeach />
       <Footer />
     </div>
   );

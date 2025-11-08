@@ -22,7 +22,8 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
+    // Only handle hash scrolling on the home page
+    if (pathname === "/" && hash) {
       // Wait for page to load, then scroll to hash
       setTimeout(() => {
         const element = document.querySelector(hash);
@@ -31,6 +32,7 @@ function ScrollToTop() {
         }
       }, 100);
     } else {
+      // For all other pages, always scroll to top
       window.scrollTo(0, 0);
     }
   }, [pathname, hash]);
