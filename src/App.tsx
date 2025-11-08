@@ -11,6 +11,7 @@ import TajweedRegistration from "./pages/TajweedRegistration";
 import QiraatRegistration from "./pages/QiraatRegistration";
 import HifthRegistration from "./pages/HifthRegistration";
 import ArabicRegistration from "./pages/ArabicRegistration";
+import ReadAndRiseRegistration from "./pages/ReadAndRiseRegistration";
 import Contact from "./pages/ContactPage";
 import Donations from "./pages/Donations";
 import Videos from "./pages/Videos";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/tajweed/tajweed-registration" element={<TajweedRegistration />} />
+          <Route path="/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
           <Route path="/qiraat/major-qiraat-registration" element={<QiraatRegistration />} />
           <Route path="/qiraat/minor-qiraat-registration" element={<QiraatRegistration />} />
           <Route path="/tahfedh/hifthregister" element={<HifthRegistration />} />

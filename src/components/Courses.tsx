@@ -222,6 +222,73 @@ export const Courses = () => {
             </Button>
           </div>
         </div>
+
+        {/* Read and Rise Program */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center">"Read and Rise" Program:</h3>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="text-center mb-8 text-lg" dir="rtl">
+              قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: يُقَالُ لِصَاحِبِ الْقُرْآنِ اقْرَأْ وَارْتَقِ وَرَتِّلْ كَمَا كُنْتَ تُرَتِّلُ فِي الدُّنْيَا، فَإِنَّ مَنْزِلَكَ عِنْدَ آخِرِ آيَةٍ تَقْرَؤُهَا
+            </div>
+            
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              The Prophet (ﷺ) said, "It will be said to the companion of the Quran [on the Day of Resurrection]: read and rise [in ranks] and recite as you used to recite when you were in the world, for your rank will be at the last verse you recite."
+            </p>
+
+            <div className="mb-8">
+              <h4 className="text-xl font-semibold mb-4 text-green-600">## Program Overview</h4>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                To ensure that beginner students who find an academic approach challenging can also find benefit, we have launched this program: <span className="text-blue-500 font-semibold">"Iqra' Wartaqi"</span> – "Read and Rise."
+              </p>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                This program offers recitation correction lessons and complete reading of the Holy Quran from beginning to end, specifically designed for beginners. Students recite the entire Holy Quran under the guidance and evaluation of skilled Quran reciters who are proficient and have mastered its letters.
+              </p>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-xl font-semibold mb-4 text-green-600">## Program Goals</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex gap-2">
+                  <span className="text-green-600 font-bold">–</span>
+                  <span>*Master the letters of the Quran* and apply the basic rules of recitation through repeated practice and systematic teaching of the rules.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-green-600 font-bold">–</span>
+                  <span>*Remove fear and difficulty* that may have developed in the minds of some students regarding Quran recitation.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-green-600 font-bold">–</span>
+                  <span>*Make recitation a natural habit* by facilitating the learning process so that it becomes instinctive.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-green-600 font-bold">–</span>
+                  <span>*Instil appreciation for recitation* and establish a close, meaningful relationship with the Book of Allah (SWT).</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-green-600 font-bold">–</span>
+                  <span>*Learn proper starting and stopping points* in a practical, applied manner, ensuring that the meanings of the verses are properly understood and thus greatly rewarded.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-xl font-semibold mb-4 text-green-600">## How to Join?</h4>
+              <p className="text-muted-foreground mb-4">
+                To join the <span className="font-semibold">"Read and Rise" program</span>, please follow the link on: <span className="text-blue-500">"Iqra'_WaRtaqi"</span>.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <Button 
+                className="bg-blue-500 hover:bg-blue-600"
+                onClick={() => navigate('/tajweed/read-and-rise')}
+              >
+                Read and Rise Registration
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
