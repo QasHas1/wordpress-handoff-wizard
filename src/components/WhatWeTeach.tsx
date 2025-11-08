@@ -25,7 +25,7 @@ export const WhatWeTeach = () => {
     <section id="what-we-teach" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">WHAT WE TEACH</h2>
+          <h2 className="text-4xl font-bold mb-6">What We Teach</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
