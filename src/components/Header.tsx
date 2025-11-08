@@ -27,6 +27,7 @@ export const Header = () => {
   const coursesPosition = 2; // Insert courses after "About Us"
 
   const courseItems = [
+    { name: "Courses", href: "/courses", isExternal: true },
     { name: "Tajweed", href: "/#tajweed" },
     { name: "Hifth", href: "/#hifth" },
     { name: "Qiraat", href: "/#qiraat" },
@@ -73,9 +74,15 @@ export const Header = () => {
               <DropdownMenuContent>
                 {courseItems.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <a href={item.href} className="cursor-pointer">
-                      {item.name}
-                    </a>
+                    {item.isExternal ? (
+                      <Link to={item.href} className="cursor-pointer w-full">
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <a href={item.href} className="cursor-pointer">
+                        {item.name}
+                      </a>
+                    )}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -148,14 +155,25 @@ export const Header = () => {
               {/* Mobile Courses Section */}
               <div className="text-sm font-semibold text-teal-300 px-2 pt-2">Courses</div>
               {courseItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm hover:text-teal-300 transition-colors duration-200 px-4 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.isExternal ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-sm hover:text-teal-300 transition-colors duration-200 px-4 py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm hover:text-teal-300 transition-colors duration-200 px-4 py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
 
               {navItems.slice(coursesPosition).map((item) => (

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import CoursesPage from "./pages/Courses";
 import NotFound from "./pages/NotFound";
 import TajweedRegistration from "./pages/TajweedRegistration";
 import QiraatRegistration from "./pages/QiraatRegistration";
@@ -51,6 +52,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/courses" element={<CoursesPage />} />
           <Route path="/tajweed/tajweed-registration" element={<TajweedRegistration />} />
           <Route path="/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
           <Route path="/qiraat/major-qiraat-registration" element={<QiraatRegistration />} />
