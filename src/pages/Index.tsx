@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { QASPA } from "@/components/QASPA";
-import { Ijazaat } from "@/components/Ijazaat";
-import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -16,8 +14,6 @@ const Index = () => {
       <Header />
       <Hero />
       <QASPA />
-      <Ijazaat />
-      <Contact />
       <Footer />
     </div>
   );
