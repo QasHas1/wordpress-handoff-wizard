@@ -275,7 +275,7 @@ export const Courses = () => {
             <div className="mb-8">
               <h4 className="text-xl font-semibold mb-4 text-green-600">## How to Join?</h4>
               <p className="text-muted-foreground mb-4">
-                To join the <span className="font-semibold">"Read and Rise" program</span>, please follow the link on: <span className="text-blue-500">"Iqra'_WaRtaqi"</span>.
+                To join the <span className="font-semibold">"Read and Rise" program</span>, please click on the registration button below.
               </p>
             </div>
 
