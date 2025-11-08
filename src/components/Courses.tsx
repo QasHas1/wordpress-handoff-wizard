@@ -309,7 +309,11 @@ export const Courses = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button size="lg" onClick={() => navigate('/tajweed/read-and-rise')}>
+            <Button 
+              size="lg"
+              className="bg-blue-500 hover:bg-blue-600"
+              onClick={() => navigate('/tajweed/read-and-rise')}
+            >
               <BookOpen className="mr-2 h-5 w-5" />
               Register for Read and Rise Program
             </Button>
