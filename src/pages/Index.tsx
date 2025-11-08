@@ -16,6 +16,7 @@ const Index = () => {
       <Hero />
       <WhatWeTeach />
       <QASPA />
+      <div className="py-12"></div>
       <Footer />
     </div>
   );

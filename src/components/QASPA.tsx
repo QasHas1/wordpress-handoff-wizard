@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import qaspaBackground from "@/assets/qaspa-background.jpg";
+import qaspaBackground from "@/assets/what-we-teach-bg.jpg";
 
 export const QASPA = () => {
   return (
