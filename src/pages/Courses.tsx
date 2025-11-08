@@ -4,7 +4,6 @@ import { Courses } from "@/components/Courses";
 import { HifthLessons } from "@/components/HifthLessons";
 import { QiraatLessons } from "@/components/QiraatLessons";
 import { ArabicLessons } from "@/components/ArabicLessons";
-import { Ijazaat } from "@/components/Ijazaat";
 import { Footer } from "@/components/Footer";
 
 const CoursesPage = () => {
@@ -19,7 +18,6 @@ const CoursesPage = () => {
       <HifthLessons />
       <QiraatLessons />
       <ArabicLessons />
-      <Ijazaat />
       <Footer />
     </div>
   );
