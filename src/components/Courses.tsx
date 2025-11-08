@@ -218,68 +218,107 @@ export const Courses = () => {
 
         {/* Read and Rise Program */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold mb-8 text-center">"Read and Rise" Program:</h3>
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold mb-4">"Read and Rise" Program</h3>
+            <div className="w-24 h-1 bg-primary mx-auto"></div>
+          </div>
           
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="text-center mb-8 text-lg" dir="rtl">
-              قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: يُقَالُ لِصَاحِبِ الْقُرْآنِ اقْرَأْ وَارْتَقِ وَرَتِّلْ كَمَا كُنْتَ تُرَتِّلُ فِي الدُّنْيَا، فَإِنَّ مَنْزِلَكَ عِنْدَ آخِرِ آيَةٍ تَقْرَؤُهَا
-            </div>
-            
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              The Prophet (ﷺ) said, "It will be said to the companion of the Quran [on the Day of Resurrection]: read and rise [in ranks] and recite as you used to recite when you were in the world, for your rank will be at the last verse you recite."
-            </p>
+          <div className="max-w-5xl mx-auto">
+            {/* Hadith Card */}
+            <Card className="mb-8 border-primary/20 shadow-lg">
+              <CardContent className="p-8">
+                <div className="text-center mb-6 text-xl font-arabic leading-relaxed" dir="rtl">
+                  قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: يُقَالُ لِصَاحِبِ الْقُرْآنِ اقْرَأْ وَارْتَقِ وَرَتِّلْ كَمَا كُنْتَ تُرَتِّلُ فِي الدُّنْيَا، فَإِنَّ مَنْزِلَكَ عِنْدَ آخِرِ آيَةٍ تَقْرَؤُهَا
+                </div>
+                <p className="text-muted-foreground text-center leading-relaxed italic">
+                  The Prophet (ﷺ) said, "It will be said to the companion of the Quran [on the Day of Resurrection]: read and rise [in ranks] and recite as you used to recite when you were in the world, for your rank will be at the last verse you recite."
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-green-600">## Program Overview</h4>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                To ensure that beginner students who find an academic approach challenging can also find benefit, we have launched this program: <span className="text-blue-500 font-semibold">"Iqra' Wartaqi"</span> – "Read and Rise."
-              </p>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                This program offers recitation correction lessons and complete reading of the Holy Quran from beginning to end, specifically designed for beginners. Students recite the entire Holy Quran under the guidance and evaluation of skilled Quran reciters who are proficient and have mastered its letters.
-              </p>
-            </div>
+            {/* Program Overview Card */}
+            <Card className="mb-8 hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="bg-gradient-to-r from-primary/10 to-primary/5">
+                <CardTitle className="text-2xl flex items-center gap-2">
+                  <BookOpen className="h-6 w-6 text-primary" />
+                  Program Overview
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  To ensure that beginner students who find an academic approach challenging can also find benefit, we have launched this program: <span className="text-primary font-semibold">"Iqra' Wartaqi"</span> – "Read and Rise."
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  This program offers recitation correction lessons and complete reading of the Holy Quran from beginning to end, specifically designed for beginners. Students recite the entire Holy Quran under the guidance and evaluation of skilled Quran reciters who are proficient and have mastered its letters.
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-green-600">## Program Goals</h4>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">–</span>
-                  <span>*Master the letters of the Quran* and apply the basic rules of recitation through repeated practice and systematic teaching of the rules.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">–</span>
-                  <span>*Remove fear and difficulty* that may have developed in the minds of some students regarding Quran recitation.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">–</span>
-                  <span>*Make recitation a natural habit* by facilitating the learning process so that it becomes instinctive.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">–</span>
-                  <span>*Instil appreciation for recitation* and establish a close, meaningful relationship with the Book of Allah (SWT).</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-green-600 font-bold">–</span>
-                  <span>*Learn proper starting and stopping points* in a practical, applied manner, ensuring that the meanings of the verses are properly understood and thus greatly rewarded.</span>
-                </li>
-              </ul>
-            </div>
+            {/* Program Goals Card */}
+            <Card className="mb-8 hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="bg-gradient-to-r from-primary/10 to-primary/5">
+                <CardTitle className="text-2xl flex items-center gap-2">
+                  <Award className="h-6 w-6 text-primary" />
+                  Program Goals
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  {[
+                    {
+                      title: "Master the letters of the Quran",
+                      description: "and apply the basic rules of recitation through repeated practice and systematic teaching of the rules."
+                    },
+                    {
+                      title: "Remove fear and difficulty",
+                      description: "that may have developed in the minds of some students regarding Quran recitation."
+                    },
+                    {
+                      title: "Make recitation a natural habit",
+                      description: "by facilitating the learning process so that it becomes instinctive."
+                    },
+                    {
+                      title: "Instil appreciation for recitation",
+                      description: "and establish a close, meaningful relationship with the Book of Allah (SWT)."
+                    },
+                    {
+                      title: "Learn proper starting and stopping points",
+                      description: "in a practical, applied manner, ensuring that the meanings of the verses are properly understood and thus greatly rewarded."
+                    }
+                  ].map((goal, index) => (
+                    <div key={index} className="flex gap-3 items-start p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                      <div className="mt-1 flex-shrink-0">
+                        <div className="h-2 w-2 rounded-full bg-primary"></div>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground">{goal.title}</span>
+                        <span className="text-muted-foreground"> {goal.description}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
 
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-green-600">## How to Join?</h4>
-              <p className="text-muted-foreground mb-4">
-                To join the <span className="font-semibold">"Read and Rise" program</span>, please click on the registration button below.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <Button 
-                className="bg-blue-500 hover:bg-blue-600"
-                onClick={() => navigate('/tajweed/read-and-rise')}
-              >
-                Read and Rise Registration
-              </Button>
-            </div>
+            {/* How to Join Card */}
+            <Card className="border-primary/30 hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="bg-gradient-to-r from-primary/10 to-primary/5 text-center">
+                <CardTitle className="text-2xl">Ready to Begin Your Journey?</CardTitle>
+                <CardDescription className="text-base">
+                  Join the "Read and Rise" program and start your transformative Quranic learning experience
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-8 text-center">
+                <Button 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 h-auto"
+                  onClick={() => navigate('/tajweed/read-and-rise')}
+                >
+                  <BookOpen className="mr-2 h-5 w-5" />
+                  Register for Read and Rise Program
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
