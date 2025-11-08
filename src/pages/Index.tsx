@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { WhatWeTeach } from "@/components/WhatWeTeach";
 import { QASPA } from "@/components/QASPA";
+import { Ijazaat } from "@/components/Ijazaat";
+import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -14,9 +15,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <WhatWeTeach />
       <QASPA />
-      <div className="py-12"></div>
+      <Ijazaat />
+      <Contact />
       <Footer />
     </div>
   );

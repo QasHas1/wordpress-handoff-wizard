@@ -142,7 +142,7 @@ export const ArabicLessons = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-blue-500 hover:bg-blue-600"
+            className="bg-green-600 hover:bg-green-700"
             onClick={() => navigate('/arabic/arabic-registration')}
           >
             Arabic Registration

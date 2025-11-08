@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { Checkbox } from "@/components/ui/checkbox";
 
 interface RegistrationProps {
   courseType: string;
@@ -84,50 +83,13 @@ export const Registration = ({ courseType, courses = [] }: RegistrationProps) =>
                 </Select>
               </div>
 
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-medium mb-2">Ibn Al Jazari Institute is working in the time zone: UTC + 0,</p>
-                  <p className="text-sm mb-4">For all courses, please state the day and times you are available to study with us, (Multiple selections are possible):</p>
-                </div>
-                
-                <div className="space-y-3">
-                  <Label className="text-base">Days:</Label>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Saturday', 'Sunday'].map((day) => (
-                      <div key={day} className="flex items-center space-x-2">
-                        <Checkbox id={day} />
-                        <label htmlFor={day} className="text-sm cursor-pointer">{day}</label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <Label className="text-base">Please choose the preferred time for you to study with us:</Label>
-                  <div className="space-y-2">
-                    {[
-                      { id: 'earlier-morning', label: '(Earlier Morning): 4 am - 6 am' },
-                      { id: 'morning', label: '(Morning): 6 am -8 am' },
-                      { id: 'late-morning-1', label: '(Late Morning_1): 8 am -10 am' },
-                      { id: 'late-morning-2', label: '(Late Morning_2):10 am -12 pm (noon)' },
-                      { id: 'early-afternoon-1', label: '(Early afternoon_1): 12 pm - 3pm' },
-                      { id: 'late-afternoon-2', label: '(Late afternoon_2): 3pm - 5pm' },
-                      { id: 'evening', label: '(Evening): 5 pm to 7 pm' },
-                      { id: 'early-evening-5', label: '(Early evening_5): 7 to 8:30 pm' },
-                      { id: 'night', label: '(Night): 9 pm to 12:00, then/or: 12:00 to 4 am' }
-                    ].map((timeSlot) => (
-                      <div key={timeSlot.id} className="flex items-center space-x-2">
-                        <Checkbox id={timeSlot.id} />
-                        <label htmlFor={timeSlot.id} className="text-sm cursor-pointer">{timeSlot.label}</label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <p className="text-sm text-muted-foreground italic">
-                  If any teachers are available during your chosen time, we will contact you. 
-                  Otherwise, we will keep you updated with any new time slot availabilities.
-                </p>
+              <div>
+                <Label htmlFor="availability">Preferred Class Times</Label>
+                <Textarea 
+                  id="availability" 
+                  placeholder="Please specify your preferred days and times for classes"
+                  rows={3}
+                />
               </div>
 
               <div>

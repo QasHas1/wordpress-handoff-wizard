@@ -132,7 +132,7 @@ export const HifthLessons = () => {
               </p>
               <Button 
                 size="lg" 
-                className="bg-blue-500 hover:bg-blue-600"
+                className="bg-green-600 hover:bg-green-700"
                 onClick={() => navigate('/tahfedh/hifthregister')}
               >
                 Hifth Registration

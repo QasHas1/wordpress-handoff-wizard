@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import CoursesPage from "./pages/Courses";
-import IjazaatPage from "./pages/IjazaatPage";
 import NotFound from "./pages/NotFound";
 import TajweedRegistration from "./pages/TajweedRegistration";
 import QiraatRegistration from "./pages/QiraatRegistration";
@@ -18,7 +17,6 @@ import Contact from "./pages/ContactPage";
 import Donations from "./pages/Donations";
 import Videos from "./pages/Videos";
 import Events from "./pages/Events";
-import Hifth from "./pages/Hifth";
 
 const queryClient = new QueryClient();
 
@@ -55,8 +53,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<CoursesPage />} />
-          <Route path="/courses/ijazaat" element={<IjazaatPage />} />
-          <Route path="/courses/hifth" element={<Hifth />} />
           <Route path="/tajweed/tajweed-registration" element={<TajweedRegistration />} />
           <Route path="/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
           <Route path="/qiraat/major-qiraat-registration" element={<QiraatRegistration />} />

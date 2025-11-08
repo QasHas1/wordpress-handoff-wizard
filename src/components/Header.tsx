@@ -32,7 +32,7 @@ export const Header = () => {
     { name: "Hifth", href: "/#hifth" },
     { name: "Qiraat", href: "/#qiraat" },
     { name: "Arabic", href: "/#arabic" },
-    { name: "Ijazaat", href: "/courses/ijazaat", isExternal: true }
+    { name: "Ijazaat", href: "/#ijazaat" }
   ];
 
   return (
