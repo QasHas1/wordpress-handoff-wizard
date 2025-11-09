@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -57,7 +57,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses" element={<Navigate to="/courses/overview" replace />} />
+          <Route path="/courses/overview" element={<CoursesPage />} />
           <Route path="/courses/ijazaat" element={<IjazaatPage />} />
           <Route path="/tajweed" element={<TajweedPage />} />
           <Route path="/courses/hifth" element={<HifthPage />} />

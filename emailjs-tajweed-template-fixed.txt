@@ -1,0 +1,189 @@
+===========================================
+EMAILJS TEMPLATE FOR TAJWEED REGISTRATION (FIXED)
+===========================================
+
+This version removes Handlebars conditionals which EmailJS doesn't support.
+Copy this template into your EmailJS template editor.
+
+===========================================
+SUBJECT LINE:
+===========================================
+New Tajweed Registration - {{firstName}} {{lastName}}
+
+===========================================
+EMAIL BODY (HTML):
+===========================================
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #0f172a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border: 1px solid #dee2e6;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: white;
+            border-left: 4px solid #0ea5e9;
+            border-radius: 4px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .field {
+            margin-bottom: 12px;
+        }
+        .field-label {
+            font-weight: bold;
+            color: #475569;
+            display: inline-block;
+            min-width: 150px;
+        }
+        .field-value {
+            color: #1e293b;
+        }
+        .list-item {
+            padding: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 12px;
+            border-top: 1px solid #dee2e6;
+            margin-top: 20px;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>New Tajweed Registration</h1>
+        <p>Ibn Al-Jazari Institute</p>
+    </div>
+    
+    <div class="content">
+        <!-- Personal Information -->
+        <div class="section">
+            <div class="section-title">Personal Information</div>
+            <div class="field">
+                <span class="field-label">Full Name:</span>
+                <span class="field-value">{{firstName}} {{lastName}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Email:</span>
+                <span class="field-value">{{email}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Phone:</span>
+                <span class="field-value">{{phone}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Age:</span>
+                <span class="field-value">{{age}}</span>
+            </div>
+        </div>
+
+        <!-- Course Information -->
+        <div class="section">
+            <div class="section-title">Course Information</div>
+            <div class="field">
+                <span class="field-label">Course Type:</span>
+                <span class="field-value highlight">{{courseType}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Selected Course:</span>
+                <span class="field-value highlight">{{course}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Previous Experience:</span>
+                <span class="field-value">{{experience}}</span>
+            </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="section">
+            <div class="section-title">Availability (UTC + 0)</div>
+            <div class="field">
+                <span class="field-label">Preferred Days:</span>
+                <div class="field-value">{{daysList}}</div>
+            </div>
+            <div class="field">
+                <span class="field-label">Preferred Time Slots:</span>
+                <div class="field-value" style="white-space: pre-line;">• {{timesList}}</div>
+            </div>
+        </div>
+
+        <!-- Learning Goals -->
+        <div class="section">
+            <div class="section-title">Learning Goals</div>
+            <div class="field-value">{{goals}}</div>
+        </div>
+
+        <!-- Additional Questions -->
+        <div class="section">
+            <div class="section-title">Additional Questions or Comments</div>
+            <div class="field-value">{{questions}}</div>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated email from the Ibn Al-Jazari Institute registration system.</p>
+            <p>Please contact the student at {{email}} or {{phone}} to confirm their registration.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+===========================================
+IMPORTANT NOTES:
+===========================================
+
+1. This template uses SIMPLE variable substitution only - no conditionals
+2. All variables are always sent from the form, so they will always have values
+3. The daysList and timesList are formatted strings that combine all selections
+4. Empty fields will show "Not provided" or "None" instead of being blank
+
+===========================================
+VARIABLES USED:
+===========================================
+
+- firstName
+- lastName
+- email
+- phone
+- age
+- courseType
+- course
+- experience
+- daysList (formatted string of selected days)
+- timesList (formatted string of selected time slots)
+- goals
+- questions
+
+===========================================
+

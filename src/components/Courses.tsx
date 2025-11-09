@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Clock, Award } from "lucide-react";
+import { BookOpen, Clock, Award, Users, GraduationCap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Courses = () => {
   const navigate = useNavigate();
@@ -318,6 +319,269 @@ export const Courses = () => {
               onClick={() => navigate('/tajweed/read-and-rise')}
             >
               Register for Read and Rise Program
+            </Button>
+          </div>
+        </div>
+
+        {/* Qira'at Lessons Overview Section - Added after Read and Rise */}
+        <div className="mb-16 max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6">Qira'at Lessons:</h2>
+          
+          <div className="space-y-4 mb-6 text-lg leading-relaxed">
+            <p>
+              We teach Al Qira'at at the highest level possible, we are proud to have presented many of our students 
+              with their Idjazaat or Assaneed to the Messenger of Allah SAWT.
+            </p>
+            <p>
+              Many of our students have moved on to become Sheikhs of Qirā'āts themselves or are leading Muslims 
+              worldwide in different communities. Some of them received certificates or recommendations to join Official 
+              Muslim organisations or universities to finish their studies.
+            </p>
+            <p>
+              Through long years of learning the knowledge of our teachers and their own massive experiences, 
+              we are able to make it easier for our students to get to the necessary advanced levels and be 
+              in a position to achieve the highest in the science of Qira'at Al Kuraan Al Kareem.
+            </p>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold mb-4">We teach the:</h3>
+            <ul className="list-disc list-inside space-y-2 text-lg ml-4">
+              <li>10 Qira'at Al Soughrah (20 Riwayat)</li>
+              <li>10 Qira'at Al Koubra (20 Riwayat, Higher Qiraat: all the ways of Kitaab Allah, around 1000 ways)</li>
+              <li>Any Qirā'āt or Riwayat separately.</li>
+              <li>The 10 Qira'at Al Sagheer</li>
+              <li>The Extra 4 Qira'at (over the well known 10 ones)</li>
+              <li>All the books related to Al Qira'at with chain of narrators to their sheikh's authors.</li>
+              <li>All related knowledge linked to Qirā'āt.</li>
+            </ul>
+          </div>
+
+          {/* Qira'at Course Subsections */}
+          <div className="space-y-6 mt-12">
+            <div>
+              <p className="text-lg mb-2">
+                For more information about this, please follow this link:{" "}
+                <Link 
+                  to="/courses/qiraat" 
+                  className="text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  Qiraat
+                </Link>
+              </p>
+              <h3 className="text-3xl font-bold">Ten Minor Qirā'āt recitations Lessons:</h3>
+            </div>
+
+            <div>
+              <p className="text-lg mb-2">
+                For more information about this, please follow this link:{" "}
+                <Link 
+                  to="/courses/qiraat" 
+                  className="text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  Qiraat
+                </Link>
+              </p>
+              <h3 className="text-3xl font-bold">Ten Major Qirā'āt recitations Lessons:</h3>
+            </div>
+
+            <div>
+              <p className="text-lg mb-2">
+                For more information about this, please follow this link:{" "}
+                <Link 
+                  to="/courses/qiraat" 
+                  className="text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  Qiraat
+                </Link>
+              </p>
+              <h3 className="text-3xl font-bold">Ten Sagher Qirā'āt recitations Lessons:</h3>
+            </div>
+
+            <div>
+              <p className="text-lg mb-2">
+                For more information about this, please follow this link:{" "}
+                <Link 
+                  to="/courses/qiraat" 
+                  className="text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  Qiraat
+                </Link>
+              </p>
+              <h3 className="text-3xl font-bold">Extra Four Qirā'āt recitations Lessons:</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Hifth Al Qura'an Lessons Overview Section - Added after Qira'at */}
+        <div className="mb-16 max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6">Hifth Al Qura'an Lessons:</h2>
+          
+          <Card className="p-8 hover:shadow-lg transition-shadow duration-300 border-2">
+            <CardContent className="p-0">
+              <div className="space-y-6">
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  Hifth al Qura'an is one of the first tasks of our honoured teachers, even before they decided to create 
+                  Ibn Al Jazari Institute. Many of our students are leading Taraweeh prayers, Imams or registered with 
+                  some Islamic universities when Hifth is prerequired. Some of them participated in many International 
+                  competitions reaching, for many occasions, good positions.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4 border-t">
+                  <p className="text-lg font-semibold text-foreground">
+                    To benefit from our large experience, apply for <span className="text-primary">Hifth Al Qur'an</span>:
+                  </p>
+                  <Button 
+                    asChild
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    <Link to="/courses/hifth">
+                      Learn More
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Arabic Lessons Section - Added after Hifth */}
+        <div className="mb-16">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">Arabic Lessons:</h2>
+            <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Our Arabic lessons are taught by Arabic speaking teachers, with a large experience of teaching this language in European countries. All our courses end by a certification, or Idjazah for the student to transmit the knowledge taught in the lesson. These are the actual modules taught in our Institute:
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+            {[
+              {
+                code: "ARILEV",
+                title: "Arabic Course for English-Speaking Students",
+                description: "Introductory levels: based on specific books to read Al Qur'an with ease. In this level students could deeply study the content of the Medina Program (Arabic Course for English Speaking Students volumes 1 to 3), as well as other complimentary booklets written by the scholars of Ibn Al Jazari Institute.",
+                levels: ["ARILEV1", "ARILEV2", "ARILEV3"],
+                books: "Volumes 1-3 + Side books"
+              },
+              {
+                code: "ARBYLEV1",
+                title: "Arabic for Beginners Level 1",
+                description: "Level 1: Arabic for beginners based on Al Arabia Bayna Yadayk Book 1, as well as other complimentary booklets written by the scholars of Ibn Al Jazari Institute.",
+                books: "Al Arabia Bayna Yadayk Book 1"
+              },
+              {
+                code: "ARBYLEV2", 
+                title: "Arabic for Beginners Level 2",
+                description: "Level 2: Arabic for beginners based on Al Arabia Bayna Yadayk Book 2, as well as other complimentary booklets written by the scholars of Ibn Al Jazari Institute.",
+                books: "Al Arabia Bayna Yadayk Book 2"
+              },
+              {
+                code: "ARBYLEV3",
+                title: "Arabic for Beginners Level 3", 
+                description: "Level 3: Arabic for beginners based on Al Arabia Bayna Yadayk Book 3, as well as other complimentary booklets written by the scholars of Ibn Al Jazari Institute.",
+                books: "Al Arabia Bayna Yadayk Book 3"
+              },
+              {
+                code: "ARFQUR",
+                title: "Arabic of the Qur'an Al Kareem",
+                description: "Specialized course focusing on the Arabic language as used in the Quran.",
+                books: "Quranic Arabic texts"
+              },
+              {
+                code: "ARGRA1",
+                title: "Arabic Grammar Level 1",
+                description: "Lesson mainly in Arabic language, to understand the main grammatically rules. A certification will be given and an Idjazah of the book to reported all the way back to the author.",
+                books: "Basic grammar texts"
+              },
+              {
+                code: "ARGRA2",
+                title: "Arabic Grammar Level 2",
+                description: "Lesson completely in Arabic language, to take the students to a medium level of the grammar rules, helping them to talk without any grammar mistake. A certification of the lesson will be issued, plus an Idjazah of the book in the programme.",
+                books: "Intermediate grammar texts"
+              },
+              {
+                code: "ARGRA3",
+                title: "Arabic Grammar Level 3",
+                description: "Lesson completely in Arabic language, to take the students to a highest level possible of Arabic language grammar. A certification of the lesson will be issued, plus an Idjazah of the books and poems in the programme.",
+                books: "Advanced grammar texts and poems"
+              }
+            ].map((course) => (
+              <Card key={course.code} className="hover:shadow-lg transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-2">
+                    <Badge variant="outline" className="text-green-600 border-green-600">
+                      {course.code}
+                    </Badge>
+                    {course.levels && (
+                      <div className="flex gap-1">
+                        {course.levels.map((level) => (
+                          <Badge key={level} variant="secondary" className="text-xs">
+                            {level}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <CardTitle className="text-xl">{course.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {course.description}
+                  </p>
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <BookOpen className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                    <span>{course.books}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Key Features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <Users className="h-12 w-12 mx-auto mb-4 text-blue-600" />
+                <h3 className="font-semibold mb-2">Small Classes</h3>
+                <p className="text-sm text-muted-foreground">
+                  Our lessons are taught in small classes, no more than seven students per group.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <GraduationCap className="h-12 w-12 mx-auto mb-4 text-green-600" />
+                <h3 className="font-semibold mb-2">Expert Teachers</h3>
+                <p className="text-sm text-muted-foreground">
+                  Taught by Arabic speaking teachers with extensive European teaching experience.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center">
+              <CardContent className="pt-6">
+                <BookOpen className="h-12 w-12 mx-auto mb-4 text-purple-600" />
+                <h3 className="font-semibold mb-2">Certification</h3>
+                <p className="text-sm text-muted-foreground">
+                  All courses end with certification or Idjazah to transmit the knowledge.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <p className="text-muted-foreground mb-4">
+              Student registration is now open at this link:
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-blue-500 hover:bg-blue-600"
+              onClick={() => navigate('/arabic/arabic-registration')}
+            >
+              Arabic Registration
             </Button>
           </div>
         </div>

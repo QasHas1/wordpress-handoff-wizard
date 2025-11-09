@@ -27,7 +27,7 @@ export const Header = () => {
   const coursesPosition = 2; // Insert courses after "About Us"
 
   const courseItems = [
-    { name: "Overview", href: "/courses", isExternal: true },
+    { name: "Overview", href: "/courses/overview", isExternal: true },
     { name: "Tajweed", href: "/tajweed", isExternal: true },
     { name: "Hifth", href: "/courses/hifth", isExternal: true },
     { name: "Qiraat", href: "/courses/qiraat", isExternal: true },
