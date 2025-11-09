@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { useNavigate } from "react-router-dom";
 
 const Donations = () => {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     document.title = "Donations - Ibn Al-Jazari Institute";
   }, []);
@@ -39,7 +42,10 @@ const Donations = () => {
 
           {/* Arabic Version Link */}
           <div className="mb-8">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
+            <Button 
+              className="bg-emerald-600 hover:bg-emerald-700 text-white"
+              onClick={() => navigate('/donations/arabic-donations')}
+            >
               إن أردت النسخة العربية لهذه الرسالة - فتفضل اضغط هنا
             </Button>
           </div>

@@ -22,6 +22,7 @@ import ArabicRegistration from "./pages/ArabicRegistration";
 import ReadAndRiseRegistration from "./pages/ReadAndRiseRegistration";
 import Contact from "./pages/ContactPage";
 import Donations from "./pages/Donations";
+import ArabicDonations from "./pages/ArabicDonations";
 import Videos from "./pages/Videos";
 import Events from "./pages/Events";
 import Terms from "./pages/Terms";
@@ -77,6 +78,7 @@ const App = () => (
           <Route path="/arabic/arabic-registration" element={<ArabicRegistration />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/donations" element={<Donations />} />
+          <Route path="/donations/arabic-donations" element={<ArabicDonations />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/events" element={<Events />} />
           <Route path="/terms" element={<Terms />} />
