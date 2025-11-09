@@ -109,10 +109,14 @@ export const QiraatLessons = () => {
         </div>
 
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-5 mb-8">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <BookOpen className="h-4 w-4" />
               Overview
+            </TabsTrigger>
+            <TabsTrigger value="ten-saghir" className="flex items-center gap-2">
+              <BookOpen className="h-4 w-4" />
+              Ten Saghir
             </TabsTrigger>
             <TabsTrigger value="minor" className="flex items-center gap-2">
               <Users className="h-4 w-4" />
@@ -172,6 +176,64 @@ export const QiraatLessons = () => {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          <TabsContent value="ten-saghir" className="space-y-6">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold mb-2">Ten Saghir Qira'at recitations Lessons:</h3>
+              <p className="text-red-600 font-medium italic">(Please note the desired codes down for the registration process.)</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="flex justify-center">
+                <img 
+                  src="https://ibnaljazariinstitute.org/wp-content/uploads/2020/08/WEB_%D9%82%D8%B1%D8%A7%D8%A1%D8%A9-%D8%A3%D9%87%D9%84-%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-01.jpg"
+                  alt="Qira'at of Medina - Arabic"
+                  className="w-full max-w-md rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img 
+                  src="https://ibnaljazariinstitute.org/wp-content/uploads/2020/08/Web_Madinah-Qiraaah-In-English-01.jpg"
+                  alt="Qira'at of Medina - English"
+                  className="w-full max-w-md rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-3 max-w-4xl mx-auto">
+              <p className="text-muted-foreground">
+                <span className="text-emerald-600 font-semibold">Reference: Riwayat/Qiraat</span>
+              </p>
+
+              <div className="space-y-2 text-foreground">
+                <p><span className="text-emerald-600 font-semibold">QSA101:</span>From the TEN Naafi'a, Riwayat: <strong>Al Azraq</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA102:</span>From the TEN Naafi'a, Riwayat: <strong>Abussamad</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA103:</span>From the TEN Naafi'a, Riwayat: <strong>Al Asbahaani</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA104:</span>From the TEN Naafi'a, Riwayat: <strong>Abu Nasheet</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA105.1:</span>From the TEN Naafi'a, Riwayat: <strong>Al Hulwaani (Abu Mihraan Al Jammal)</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA105.2:</span>From the TEN Naafi'a, Riwayat: <strong>Al Hulwaani (Al Waasiti)</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA106:</span>From the TEN Naafi'a, Riwayat: <strong>Al Qaadhi</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA107:</span>From the TEN Naafi'a, Riwayat: <strong>Ibn Abdus</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA108:</span>From the TEN Naafi'a, Riwayat: <strong>Al Mufassir</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA109:</span>From the TEN Naafi'a, Riwayat: <strong>Ibn Al Mussaiabi</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA1010:</span>From the TEN Naafi'a, Riwayat: <strong>Ibn Saa'daan</strong></p>
+                <p><span className="text-emerald-600 font-semibold">QSA10:</span>Grouped All 10 Naafi'a, Riwayat <strong>((It needs plenty of time! It may take a long time to prepare and to read))</strong></p>
+              </div>
+
+              <div className="pt-6 text-center">
+                <p className="mb-4">
+                  Student registration is now open at this link:{" "}
+                  <Button 
+                    variant="link" 
+                    className="text-blue-500 hover:text-blue-600 p-0 h-auto"
+                    onClick={() => navigate('/qiraat/ten-saghir-registration')}
+                  >
+                    Ten Saghir Qira'at recitations Registration
+                  </Button>
+                </p>
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="minor" className="space-y-6">
