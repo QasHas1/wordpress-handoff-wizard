@@ -8,6 +8,10 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import CoursesPage from "./pages/Courses";
 import IjazaatPage from "./pages/IjazaatPage";
+import TajweedPage from "./pages/TajweedPage";
+import HifthPage from "./pages/HifthPage";
+import QiraatPage from "./pages/QiraatPage";
+import ArabicPage from "./pages/ArabicPage";
 import NotFound from "./pages/NotFound";
 import TajweedRegistration from "./pages/TajweedRegistration";
 import QiraatRegistration from "./pages/QiraatRegistration";
@@ -55,6 +59,10 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/courses/ijazaat" element={<IjazaatPage />} />
+          <Route path="/tajweed" element={<TajweedPage />} />
+          <Route path="/courses/hifth" element={<HifthPage />} />
+          <Route path="/courses/qiraat" element={<QiraatPage />} />
+          <Route path="/courses/arabic" element={<ArabicPage />} />
           <Route path="/tajweed/tajweed-registration" element={<TajweedRegistration />} />
           <Route path="/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
           <Route path="/qiraat/major-qiraat-registration" element={<QiraatRegistration />} />

@@ -27,11 +27,11 @@ export const Header = () => {
   const coursesPosition = 2; // Insert courses after "About Us"
 
   const courseItems = [
-    { name: "Courses", href: "/courses", isExternal: true },
-    { name: "Tajweed", href: "/#tajweed" },
-    { name: "Hifth", href: "/#hifth" },
-    { name: "Qiraat", href: "/#qiraat" },
-    { name: "Arabic", href: "/#arabic" },
+    { name: "Overview", href: "/courses", isExternal: true },
+    { name: "Tajweed", href: "/tajweed", isExternal: true },
+    { name: "Hifth", href: "/courses/hifth", isExternal: true },
+    { name: "Qiraat", href: "/courses/qiraat", isExternal: true },
+    { name: "Arabic", href: "/courses/arabic", isExternal: true },
     { name: "Ijazaat", href: "/courses/ijazaat", isExternal: true }
   ];
 
