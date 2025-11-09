@@ -16,6 +16,7 @@ import NotFound from "./pages/NotFound";
 import TajweedRegistration from "./pages/TajweedRegistration";
 import MinorQiraatRegistration from "./pages/MinorQiraatRegistration";
 import MajorQiraatRegistration from "./pages/MajorQiraatRegistration";
+import TenSaghirRegistration from "./pages/TenSaghirRegistration";
 import HifthRegistration from "./pages/HifthRegistration";
 import ArabicRegistration from "./pages/ArabicRegistration";
 import ReadAndRiseRegistration from "./pages/ReadAndRiseRegistration";
@@ -69,6 +70,7 @@ const App = () => (
           <Route path="/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
           <Route path="/qiraat/major-qiraat-registration" element={<MajorQiraatRegistration />} />
           <Route path="/qiraat/minor-qiraat-registration" element={<MinorQiraatRegistration />} />
+          <Route path="/qiraat/ten-saghir-registration" element={<TenSaghirRegistration />} />
           <Route path="/tahfedh/hifthregister" element={<HifthRegistration />} />
           <Route path="/arabic/arabic-registration" element={<ArabicRegistration />} />
           <Route path="/contact-us" element={<Contact />} />
