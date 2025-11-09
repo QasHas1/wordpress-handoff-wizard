@@ -198,7 +198,7 @@ export const QiraatLessons = () => {
             <div className="text-center pt-6">
               <Button 
                 size="lg" 
-                className="bg-emerald-600 hover:bg-emerald-700"
+                className="bg-blue-500 hover:bg-blue-600"
                 onClick={() => navigate('/qiraat/minor-qiraat-registration')}
               >
                 Register for Minor Qira'at
@@ -221,7 +221,7 @@ export const QiraatLessons = () => {
             <div className="text-center pt-6">
               <Button 
                 size="lg" 
-                className="bg-purple-600 hover:bg-purple-700"
+                className="bg-blue-500 hover:bg-blue-600"
                 onClick={() => navigate('/qiraat/major-qiraat-registration')}
               >
                 Register for Major Qira'at
@@ -268,7 +268,10 @@ export const QiraatLessons = () => {
                     in international competitions, achieving distinguished positions.
                   </p>
                   
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                  <Button 
+                    size="lg" 
+                    className="bg-blue-500 hover:bg-blue-600"
+                  >
                     Learn More About Advanced Programs
                   </Button>
                 </div>

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import qaspaBackground from "@/assets/qaspa-background.jpg";
+import qaspaBackground from "@/assets/what-we-teach-bg.jpg";
 
 export const QASPA = () => {
   return (
@@ -20,16 +20,9 @@ export const QASPA = () => {
           <p className="text-2xl mb-8 text-white font-semibold">
             We are all members of the Q.A.S.P.A : Quran and Sunna Preservation Association - UK
           </p>
-          <p className="text-lg mb-12 text-green-100 italic">
+          <p className="text-lg text-green-100 italic">
             Our aim is to help preserve the Quran and all its related sciences
           </p>
-          
-          <Button 
-            size="lg" 
-            className="bg-white text-green-700 hover:bg-green-50 px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Apply
-          </Button>
         </div>
       </div>
     </section>
