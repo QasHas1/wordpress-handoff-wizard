@@ -164,9 +164,9 @@ const Donations = () => {
               <h3 className="font-semibold mb-4">Banking Information</h3>
               
               {/* Ibn Al Jazari Institute */}
-              <Card className="bg-emerald-100">
+              <Card className="bg-emerald-50 dark:bg-emerald-950 border-emerald-200 dark:border-emerald-800">
                 <CardContent className="p-4">
-                  <div className="text-sm space-y-1">
+                  <div className="text-sm space-y-1 text-emerald-900 dark:text-emerald-100">
                     <div className="font-semibold">بنك العهد</div>
                     <div><strong>Name:</strong> IBN AL JAZARI Institute</div>
                     <div><strong>Account Number:</strong> 89836405</div>
@@ -178,9 +178,9 @@ const Donations = () => {
               </Card>
 
               {/* QASPA */}
-              <Card className="bg-blue-100">
+              <Card className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
                 <CardContent className="p-4">
-                  <div className="text-sm space-y-1">
+                  <div className="text-sm space-y-1 text-blue-900 dark:text-blue-100">
                     <div className="font-semibold">بنك الجمعية</div>
                     <div><strong>Qaspa</strong></div>
                   </div>
@@ -188,9 +188,9 @@ const Donations = () => {
               </Card>
 
               {/* Qur'an & Sunnah Preservation Association */}
-              <Card className="bg-blue-100">
+              <Card className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
                 <CardContent className="p-4">
-                  <div className="text-sm space-y-1">
+                  <div className="text-sm space-y-1 text-blue-900 dark:text-blue-100">
                     <div><strong>Qur'an & Sunnah Preservation Association</strong></div>
                     <div><strong>Sort Code:</strong> 200898</div>
                     <div><strong>Account Number:</strong> 23455513</div>
@@ -202,9 +202,9 @@ const Donations = () => {
               </Card>
 
               {/* Mirath Group */}
-              <Card className="bg-blue-100">
+              <Card className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
                 <CardContent className="p-4">
-                  <div className="text-sm space-y-1">
+                  <div className="text-sm space-y-1 text-blue-900 dark:text-blue-100">
                     <div className="font-semibold">مجموعة ميراث</div>
                     <div><strong>Mirath Group Limited</strong></div>
                     <div><strong>Sort Code:</strong> 04-00-03</div>
@@ -214,9 +214,9 @@ const Donations = () => {
               </Card>
 
               {/* International Transfer */}
-              <Card className="bg-blue-100">
+              <Card className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
                 <CardContent className="p-4">
-                  <div className="text-sm space-y-1">
+                  <div className="text-sm space-y-1 text-blue-900 dark:text-blue-100">
                     <div><strong>International Transfer:</strong></div>
                     <div><strong>Name:</strong> MIRATH GROUP LIMITED</div>
                     <div><strong>BIC:</strong> MONZGB2L</div>
