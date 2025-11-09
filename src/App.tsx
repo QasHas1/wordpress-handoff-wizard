@@ -25,6 +25,7 @@ import Donations from "./pages/Donations";
 import Videos from "./pages/Videos";
 import Events from "./pages/Events";
 import Terms from "./pages/Terms";
+import Register from "./pages/Register";
 
 const queryClient = new QueryClient();
 
@@ -80,6 +81,7 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="/register" element={<Register />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
