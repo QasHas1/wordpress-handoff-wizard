@@ -28,7 +28,7 @@ const ArabicDonations = () => {
   const progressPercentage = (currentDonated / goal) * 100;
 
   return (
-    <div className="min-h-screen bg-background" dir="rtl">
+    <div className="min-h-screen bg-background">
       <Header />
       
       <main className="container mx-auto px-4 py-20">
@@ -36,7 +36,7 @@ const ArabicDonations = () => {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-2 border-b-2 border-primary inline-block pb-2">
-              انفق ينفق عليك Arabic-Donations
+              انفق ينفق عليك Donations
             </h1>
           </div>
 
@@ -53,7 +53,7 @@ const ArabicDonations = () => {
           {/* Mission Statement */}
           <div className="mb-8 text-lg text-foreground leading-relaxed">
             <p dir="rtl">
-              <strong>السلام عليكم ورحمة الله وبركاته</strong> رسالة من معهد ابن الجزري® برمنغهام المملكة المتحدة: التبرع لإنشاء مقر دائم لمعهد الإجازة® للقيام بمهمته على أفضل وجه ممكن، في الحفاظ على القرآن الكريم وعلم القراءات بين الأجيال الحالية والقادمة.
+              <strong>السلام عليكم ورحمة الله وبركاته</strong>، رسالة من معهد ابن الجزري® برمنغهام المملكة المتحدة: التبرع لإنشاء مقر دائم لمعهد الإجازة® للقيام بمهمته على أفضل وجه ممكن، في الحفاظ على القرآن الكريم وعلم القراءات بين الأجيال الحالية والقادمة.
             </p>
           </div>
 
@@ -233,13 +233,13 @@ const ArabicDonations = () => {
 
           {/* Bismillah */}
           <div className="mb-8">
-            <p className="text-lg text-foreground text-center">
+            <p className="text-lg text-foreground" dir="rtl">
               بسم الله الرحمان الرحيم
             </p>
           </div>
 
           {/* Introduction Text */}
-          <div className="mb-8 text-foreground leading-relaxed">
+          <div className="mb-8 text-foreground leading-relaxed" dir="rtl">
             <p className="mb-4">
               الحمد لله رب العالمين، وصلى الله على نبينا محمد وعلى آله وصحبه أجمعين وبعد، هذه نبذة يسيرة - وتعليم المعهد وإنجازاته ومشاريعه ومتطلباته
             </p>
@@ -247,8 +247,8 @@ const ArabicDonations = () => {
 
           {/* Introduction Section */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6">مقدمة</h2>
-            <div className="space-y-4 text-foreground leading-relaxed">
+            <h2 className="text-3xl font-bold text-foreground mb-6" dir="rtl">مقدمة</h2>
+            <div className="space-y-4 text-foreground leading-relaxed" dir="rtl">
               <p>إلى كل محب لله ورسوله ﷺ،</p>
               <p>إلى كل من يحرص على دين الله ويريد له البقاء شامخا مزدهرا حتى يقضي الله أمرا كان مفعولا،</p>
               <p>إلى كل من يحب القرآن وعلومه، ويريد له أن يبقى نقيا صافيا خالدا، كأنما نزل بالأمس،</p>
@@ -259,8 +259,8 @@ const ArabicDonations = () => {
 
           {/* The Institute and its History */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6">المعهد وتاريخ إنشائه</h2>
-            <div className="space-y-4 text-foreground leading-relaxed">
+            <h2 className="text-3xl font-bold text-foreground mb-6" dir="rtl">المعهد وتاريخ إنشائه</h2>
+            <div className="space-y-4 text-foreground leading-relaxed" dir="rtl">
               <p>
                 حوالي 2002، م، يوم دخول الشيخ المؤسس المعهد، برمنغهام، قادما من المشرق العربي، اتصل ببعض المؤسسات لتقديم خدماته في تعليم علوم القرآن المتصلين بدراسة القرا'ات لمن يهمهم الاستفادة من الدرس. فقوبل بنوع من التردد، كون بعض المؤسسات غير متألف مع مثل هذا المعرفة. فإذ دخل حملة لتوعية برمغهام لإحياء المتصلة.
               </p>
@@ -275,8 +275,8 @@ const ArabicDonations = () => {
 
           {/* Vision and Mission */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6">الرؤية والرسالة</h2>
-            <div className="space-y-4 text-foreground leading-relaxed">
+            <h2 className="text-3xl font-bold text-foreground mb-6" dir="rtl">الرؤية والرسالة</h2>
+            <div className="space-y-4 text-foreground leading-relaxed" dir="rtl">
               <p>
                 تفخيم مهمتنا برعاية وعلم شاملة يعلم حقيقة طلاب المعرفة—منهم الذين ليسوا فقط متقنين ومتميزين في تعليمهم، بل أيضا يلتزمون بإيمانهم ويرتدونه، فخورون بتراثه، ومذكر بالأجيال قبل انتظرنا. نعمل نحو بناء افراد يستطيعون فهم المسؤولية المقدسة الممنوحة لهم ويملكون المهارة الضرورية لنقل هذه النقصان والنظير.
               </p>
@@ -288,8 +288,8 @@ const ArabicDonations = () => {
 
           {/* Global Influence */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6">طبيعة المعهد حول العالم</h2>
-            <div className="space-y-4 text-foreground leading-relaxed">
+            <h2 className="text-3xl font-bold text-foreground mb-6" dir="rtl">طبيعة المعهد حول العالم</h2>
+            <div className="space-y-4 text-foreground leading-relaxed" dir="rtl">
               <p>
                 رغم أننا كنا نظل متجذرا في برمنجهام—وهي مدينة حيوية متعددة الثقافات—إلا أن طلابنا استطاعوا حمل المعرفة لمن أراد متعلمين في كل أنحاء العالم. وقد أنشؤوا مراكز تعليمية في كل أنحاء بريطانيا، وينظمون المجتمعات في نشر الصلاة. وبعض منهم رجع لبلده الأصلي أو ينتقل لأماكن الأخرى، مستمر في نشر الرسالة في أماكن مثل فلسطين والأرض المقدسة، قطر، اليمن، ليبيا، مصر، الصومال، كينيا، ماليزيا، السودان، الجزائر، المغرب، موريتانيا، الولايات المتحدة، كندا، فرنسا، ألمانيا، بلجيكا، هولندا، وغيرها من القائمة الطويلة. كما دوما، الحمد لله.
               </p>
@@ -298,8 +298,8 @@ const ArabicDonations = () => {
 
           {/* The Project */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6">المشروع</h2>
-            <div className="space-y-4 text-foreground leading-relaxed mb-8">
+            <h2 className="text-3xl font-bold text-foreground mb-6" dir="rtl">المشروع</h2>
+            <div className="space-y-4 text-foreground leading-relaxed mb-8" dir="rtl">
               <p>
                 <strong>إيجاد مقر مستقر، معترف به على المستوى العالم.</strong> فإنشاء مكانة تمكين المعهد من مواصلة تسليم القرآن الكريم وعلومها للأجيال الحالية والقادمة بسلامة وبامتياز.
               </p>
@@ -321,19 +321,18 @@ const ArabicDonations = () => {
           {/* Contact Information */}
           <div className="mt-12 p-6 bg-muted rounded-lg">
             <div className="text-sm space-y-2">
-              <div className="text-lg mb-4 font-semibold">للاتصال بنا: معهد ابن الجزري لحفظ القرآن وتلقي القراءات وعلومها</div>
-              <div>بمدينة برمنجهام بريطانيا</div>
+              <div className="text-right font-arabic text-lg mb-4">للاتصال بنا: معهد ابن الجزري لحفظ القرآن وتلقي القراءات وعلومها</div>
+              <div className="text-right font-arabic">بمدينة برمنجهام بريطانيا</div>
               <div><strong>Ibn Al Jazari Institute®</strong></div>
-              <div>حفظ القرآن تماما مع التجويد</div>
-              <div>قراءة وعلم القراءة مركز التعلم</div>
-              <div className="mt-4"><strong>العنوان الحالي:</strong></div>
-              <div><strong>69 Whitmore Road, Birmingham, B10 0NR, UK</strong></div>
-              <div><strong>هاتف: </strong>(00 44)(0)7403135821</div>
-              <div className="mt-4"><strong>موقعنا، برسائلنا:</strong></div>
-              <div><strong>الموقع:</strong> www.ibnaljazariinstitute.com</div>
-              <div><strong>البريد الإلكتروني:</strong> ibnaljazariinstitute@gmail.com</div>
-              <div><strong>اتصل بنا:</strong> contact@ibnaljazariinstitute.co</div>
-              <div className="mt-4 text-xs">تاريخ التحديث: 12(10)\1446هـ (2025\06\06)</div>
+              <div dir="rtl">حفظ القرآن تماما مع التجويد</div>
+              <div dir="rtl">قراءة وعلم القراءة مركز التعلم</div>
+              <div className="text-right font-arabic">العنوان الحالي:</div>
+              <div><strong>69 Withmore Road, Birmingham, B10 0NR, UK</strong></div>
+              <div><strong>Tel: (00 44)(0)7403135821</strong></div>
+              <div className="text-right font-arabic">موقعنا، برسائلنا:</div>
+              <div><strong>Website:</strong> www.ibnaljazariinstitute.com</div>
+              <div><strong>Email:</strong> ibnaljazariinstitute@gmail.com</div>
+              <div><strong>Contact:</strong> contact@ibnaljazariinstitute.co</div>
             </div>
           </div>
         </div>
