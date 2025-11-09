@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import eventsLogo from "@/assets/events-logo.png";
 
 const Events = () => {
   useEffect(() => {
@@ -28,9 +29,11 @@ const Events = () => {
             {/* Institute Logo and Announcement */}
             <div className="bg-card rounded-lg p-8 mb-8 text-center">
               <div className="mb-6">
-                <div className="w-48 h-32 mx-auto bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                  IBN AL JAZARI INSTITUTE
-                </div>
+                <img 
+                  src={eventsLogo} 
+                  alt="Ibn Al-Jazari Institute Logo"
+                  className="w-64 mx-auto"
+                />
               </div>
               
               <div className="text-center space-y-4">
