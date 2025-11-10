@@ -135,7 +135,7 @@ export const Courses = () => {
             </p>
             <Button 
               className="bg-blue-500 hover:bg-blue-600"
-              onClick={() => navigate('/tajweed/tajweed-registration')}
+              onClick={() => navigate('/courses/tajweed/tajweed-registration')}
             >
               Tajweed Registration
             </Button>
@@ -210,7 +210,7 @@ export const Courses = () => {
             </p>
             <Button 
               className="bg-blue-500 hover:bg-blue-600"
-              onClick={() => navigate('/tajweed/tajweed-registration')}
+              onClick={() => navigate('/courses/tajweed/tajweed-registration')}
             >
               Tajweed Poem Registration
             </Button>
@@ -316,7 +316,7 @@ export const Courses = () => {
             <Button 
               size="lg"
               className="bg-blue-500 hover:bg-blue-600"
-              onClick={() => navigate('/tajweed/read-and-rise')}
+              onClick={() => navigate('/courses/tajweed/read-and-rise')}
             >
               Register for Read and Rise Program
             </Button>

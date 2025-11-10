@@ -45,7 +45,7 @@ const Register = () => {
                     <Button
                       variant="link"
                       className="text-blue-500 hover:text-blue-600 p-0 h-auto"
-                      onClick={() => navigate("/tajweed/tajweed-registration")}
+                      onClick={() => navigate("/courses/tajweed/tajweed-registration")}
                     >
                       form
                     </Button>
@@ -56,7 +56,7 @@ const Register = () => {
                     <Button
                       variant="link"
                       className="text-blue-500 hover:text-blue-600 p-0 h-auto"
-                      onClick={() => navigate("/tajweed/tajweed-registration")}
+                      onClick={() => navigate("/courses/tajweed/tajweed-registration")}
                     >
                       form
                     </Button>

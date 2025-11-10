@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import CoursesPage from "./pages/Courses";
@@ -59,18 +60,19 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Navigate to="/courses/overview" replace />} />
           <Route path="/courses/overview" element={<CoursesPage />} />
           <Route path="/courses/ijazaat" element={<IjazaatPage />} />
-          <Route path="/tajweed" element={<TajweedPage />} />
+          <Route path="/courses/tajweed" element={<TajweedPage />} />
           <Route path="/courses/hifth" element={<HifthPage />} />
           <Route path="/courses/qiraat" element={<QiraatPage />} />
           <Route path="/courses/arabic" element={<ArabicPage />} />
-          <Route path="/tajweed/tajweed-registration" element={<TajweedRegistration />} />
-          <Route path="/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
+          <Route path="/courses/tajweed/tajweed-registration" element={<TajweedRegistration />} />
+          <Route path="/courses/tajweed/read-and-rise" element={<ReadAndRiseRegistration />} />
           <Route path="/qiraat/major-qiraat-registration" element={<MajorQiraatRegistration />} />
           <Route path="/qiraat/minor-qiraat-registration" element={<MinorQiraatRegistration />} />
           <Route path="/qiraat/ten-saghir-registration" element={<TenSaghirRegistration />} />

@@ -1,0 +1,219 @@
+===========================================
+SOLUTION: ONE UNIVERSAL TEMPLATE FOR ALL FORMS
+===========================================
+
+PROBLEM: You've reached your EmailJS template limit but need 7+ forms.
+
+SOLUTION: Use ONE template and normalize data in your code!
+
+===========================================
+STEP 1: UPDATE YOUR EMAILJS TEMPLATE
+===========================================
+
+Template ID: template_7nu246n (or create ONE new template)
+
+SUBJECT LINE:
+New {{courseType}} Registration - {{fullName}}
+
+EMAIL BODY (HTML):
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #0f172a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border: 1px solid #dee2e6;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: white;
+            border-left: 4px solid #0ea5e9;
+            border-radius: 4px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .field {
+            margin-bottom: 12px;
+        }
+        .field-label {
+            font-weight: bold;
+            color: #475569;
+            display: inline-block;
+            min-width: 150px;
+        }
+        .field-value {
+            color: #1e293b;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 12px;
+            border-top: 1px solid #dee2e6;
+            margin-top: 20px;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>New {{courseType}} Registration</h1>
+        <p>Ibn Al-Jazari Institute</p>
+    </div>
+    
+    <div class="content">
+        <!-- Personal Information -->
+        <div class="section">
+            <div class="section-title">Personal Information</div>
+            <div class="field">
+                <span class="field-label">Full Name:</span>
+                <span class="field-value">{{fullName}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Email:</span>
+                <span class="field-value">{{email}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Phone:</span>
+                <span class="field-value">{{phone}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Age:</span>
+                <span class="field-value">{{age}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Country/City:</span>
+                <span class="field-value">{{countryCity}}</span>
+            </div>
+        </div>
+
+        <!-- Course Information -->
+        <div class="section">
+            <div class="section-title">Course Information</div>
+            <div class="field">
+                <span class="field-label">Course Type:</span>
+                <span class="field-value highlight">{{courseType}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Selected Course(s):</span>
+                <span class="field-value highlight">{{course}}</span>
+            </div>
+            <div class="field">
+                <span class="field-label">Previous Experience:</span>
+                <span class="field-value">{{experience}}</span>
+            </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="section">
+            <div class="section-title">Availability (UTC + 0)</div>
+            <div class="field">
+                <span class="field-label">Preferred Days:</span>
+                <div class="field-value">{{daysList}}</div>
+            </div>
+            <div class="field">
+                <span class="field-label">Preferred Time Slots:</span>
+                <div class="field-value" style="white-space: pre-line;">• {{timesList}}</div>
+            </div>
+        </div>
+
+        <!-- Learning Goals -->
+        <div class="section">
+            <div class="section-title">Learning Goals</div>
+            <div class="field-value">{{goals}}</div>
+        </div>
+
+        <!-- Additional Questions -->
+        <div class="section">
+            <div class="section-title">Additional Questions or Comments</div>
+            <div class="field-value">{{questions}}</div>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated email from the Ibn Al-Jazari Institute registration system.</p>
+            <p>Please contact the student at {{email}} or {{phone}} to confirm their registration.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+===========================================
+STEP 2: NORMALIZE DATA IN YOUR CODE
+===========================================
+
+The key is to make all forms send the SAME variable names:
+- fullName (instead of firstName + lastName OR firstName + surname)
+- phone (instead of phone OR telephone)
+- course (instead of course OR selectedCourses)
+
+This way, ONE template works for ALL forms!
+
+===========================================
+VARIABLES TO SEND (Standardized):
+===========================================
+
+Required:
+- fullName: "First Last" or "First Surname"
+- email: user's email
+- courseType: "Tajweed Lessons", "Hifth (Memorization)", etc.
+
+Optional:
+- phone: phone number (normalize from phone/telephone)
+- age: age if provided
+- countryCity: location if provided
+- course: selected course(s) - normalize from course/selectedCourses
+- experience: experience level
+- daysList: formatted days string
+- timesList: formatted times string
+- goals: learning goals
+- questions: additional questions
+
+===========================================
+BENEFITS:
+===========================================
+
+✓ Only ONE template needed (saves 6 template slots!)
+✓ Easy maintenance - update once, all forms benefit
+✓ Consistent email formatting
+✓ No subscription limit issues
+✓ Works with free tier
+
+===========================================
+NEXT STEPS:
+===========================================
+
+1. Copy the template above into EmailJS (update template_7nu246n)
+2. I'll update your code to normalize all form data to use the same variable names
+3. Test each form to ensure emails work correctly
+
+Would you like me to update your code files to normalize the data?
+
+===========================================
+
+

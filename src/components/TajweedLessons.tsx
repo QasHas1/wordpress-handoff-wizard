@@ -40,7 +40,7 @@ export const TajweedLessons = () => {
                 className="text-primary hover:underline font-semibold"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/tajweed/tajweed-registration');
+                  navigate('/courses/tajweed/tajweed-registration');
                 }}
               >
                 "International Advanced Diploma in Tajweed™ Sciences"
@@ -224,7 +224,7 @@ export const TajweedLessons = () => {
                 className="text-primary hover:underline font-semibold"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/tajweed/tajweed-registration');
+                  navigate('/courses/tajweed/tajweed-registration');
                 }}
               >
                 Tajweed Registration
@@ -269,7 +269,7 @@ export const TajweedLessons = () => {
                 className="text-primary hover:underline font-semibold"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate('/tajweed/tajweed-registration');
+                  navigate('/courses/tajweed/tajweed-registration');
                 }}
               >
                 Tajweed Poem Registration

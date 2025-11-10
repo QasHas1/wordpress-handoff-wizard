@@ -98,13 +98,13 @@ export const Registration = ({ courseType, courses = [] }: RegistrationProps) =>
       if (formData.night) selectedTimes.push("Night (9 pm - 12:00 am, or 12:00 am - 4 am)");
       const timesList = selectedTimes.length > 0 ? selectedTimes.join("\n• ") : "None selected";
 
-      // Prepare data for EmailJS - simple variables only, no conditionals
+      // Prepare data for EmailJS - normalized to use same variable names as all forms
       const emailData = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
+        fullName: `${formData.firstName} ${formData.lastName}`,
         email: formData.email,
         phone: formData.phone || "Not provided",
         age: formData.age || "Not provided",
+        countryCity: "Not provided",
         courseType: courseType,
         course: formData.course || "Not selected",
         experience: formData.experience || "Not specified",

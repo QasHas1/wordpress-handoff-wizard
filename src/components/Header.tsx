@@ -18,6 +18,7 @@ export const Header = () => {
   const navItems = [
     { name: "Home", href: "/", isExternal: true },
     { name: "About Us", href: "/about", isExternal: true },
+    { name: "Register", href: "/register", isExternal: true },
     { name: "Achievements", href: "/videos", isExternal: true },
     { name: "Events", href: "/events", isExternal: true },
     { name: "Contact Us", href: "/contact-us", isExternal: true },
@@ -25,10 +26,11 @@ export const Header = () => {
   ];
 
   const coursesPosition = 2; // Insert courses after "About Us"
+  const registerPosition = 3; // Register comes after Courses dropdown
 
   const courseItems = [
     { name: "Overview", href: "/courses/overview", isExternal: true },
-    { name: "Tajweed", href: "/tajweed", isExternal: true },
+    { name: "Tajweed", href: "/courses/tajweed", isExternal: true },
     { name: "Hifth", href: "/courses/hifth", isExternal: true },
     { name: "Qiraat", href: "/courses/qiraat", isExternal: true },
     { name: "Arabic", href: "/courses/arabic", isExternal: true },
@@ -88,7 +90,15 @@ export const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navItems.slice(coursesPosition).map((item) => (
+            {/* Register Link */}
+            <Link
+              to="/register"
+              className="text-sm hover:text-teal-300 transition-colors duration-200 hover:underline"
+            >
+              Register
+            </Link>
+
+            {navItems.slice(registerPosition).map((item) => (
               item.isExternal ? (
                 <Link
                   key={item.name}
@@ -176,7 +186,16 @@ export const Header = () => {
                 )
               ))}
 
-              {navItems.slice(coursesPosition).map((item) => (
+              {/* Mobile Register Link */}
+              <Link
+                to="/register"
+                className="text-sm hover:text-teal-300 transition-colors duration-200 px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Register
+              </Link>
+
+              {navItems.slice(registerPosition).map((item) => (
                 item.isExternal ? (
                   <Link
                     key={item.name}

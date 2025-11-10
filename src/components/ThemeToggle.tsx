@@ -36,12 +36,13 @@ export const ThemeToggle = () => {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="rounded-full border-2 hover:bg-accent transition-colors"
+      className="rounded-full border-2 border-white/20 bg-slate-600/50 hover:bg-slate-500/70 text-white transition-colors shadow-md"
+      title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
     >
       {theme === "light" ? (
-        <Sun className="h-5 w-5" />
+        <Sun className="h-5 w-5 text-yellow-300" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5 text-blue-200" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

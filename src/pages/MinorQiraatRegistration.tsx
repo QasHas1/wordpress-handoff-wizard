@@ -123,13 +123,18 @@ const MinorQiraatRegistration = () => {
 
     try {
       const emailData = {
-        firstName: formData.firstName,
-        surname: formData.surname,
-        telephone: formData.telephone,
+        fullName: `${formData.firstName} ${formData.surname}`,
         email: formData.email,
-        countryCity: formData.countryCity,
-        selectedCourses: selectedCourses.join(", "),
+        phone: formData.telephone || "Not provided",
+        countryCity: formData.countryCity || "Not provided",
+        course: selectedCourses.join(", "),
         courseType: "Minor Qira'at Lessons",
+        experience: "Not specified",
+        daysList: "Not specified",
+        timesList: "Not specified",
+        goals: "Not provided",
+        questions: "None",
+        age: "Not provided",
       };
 
       await emailjs.send(
