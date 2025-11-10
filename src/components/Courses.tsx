@@ -324,125 +324,168 @@ export const Courses = () => {
         </div>
 
         {/* Qira'at Lessons Overview Section - Added after Read and Rise */}
-        <div className="mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Qira'at Lessons:</h2>
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Qira'at Lessons:</h2>
+          </div>
           
-          <div className="space-y-4 mb-6 text-lg leading-relaxed">
-            <p>
-              We teach Al Qira'at at the highest level possible, we are proud to have presented many of our students 
-              with their Idjazaat or Assaneed to the Messenger of Allah SAWT.
-            </p>
-            <p>
-              Many of our students have moved on to become Sheikhs of Qirā'āts themselves or are leading Muslims 
-              worldwide in different communities. Some of them received certificates or recommendations to join Official 
-              Muslim organisations or universities to finish their studies.
-            </p>
-            <p>
-              Through long years of learning the knowledge of our teachers and their own massive experiences, 
-              we are able to make it easier for our students to get to the necessary advanced levels and be 
-              in a position to achieve the highest in the science of Qira'at Al Kuraan Al Kareem.
-            </p>
+          <div className="max-w-6xl mx-auto mb-12">
+            <Card className="p-8 hover:shadow-lg transition-shadow duration-300 border-2">
+              <CardContent className="p-0">
+                <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
+                  <p>
+                    We teach Al Qira'at at the highest level possible, we are proud to have presented many of our students 
+                    with their Idjazaat or Assaneed to the Messenger of Allah SAWT.
+                  </p>
+                  <p>
+                    Many of our students have moved on to become Sheikhs of Qirā'āts themselves or are leading Muslims 
+                    worldwide in different communities. Some of them received certificates or recommendations to join Official 
+                    Muslim organisations or universities to finish their studies.
+                  </p>
+                  <p>
+                    Through long years of learning the knowledge of our teachers and their own massive experiences, 
+                    we are able to make it easier for our students to get to the necessary advanced levels and be 
+                    in a position to achieve the highest in the science of Qira'at Al Kuraan Al Kareem.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4">We teach the:</h3>
-            <ul className="list-disc list-inside space-y-2 text-lg ml-4">
-              <li>10 Qira'at Al Soughrah (20 Riwayat)</li>
-              <li>10 Qira'at Al Koubra (20 Riwayat, Higher Qiraat: all the ways of Kitaab Allah, around 1000 ways)</li>
-              <li>Any Qirā'āt or Riwayat separately.</li>
-              <li>The 10 Qira'at Al Sagheer</li>
-              <li>The Extra 4 Qira'at (over the well known 10 ones)</li>
-              <li>All the books related to Al Qira'at with chain of narrators to their sheikh's authors.</li>
-              <li>All related knowledge linked to Qirā'āt.</li>
-            </ul>
+          <div className="max-w-6xl mx-auto mb-12">
+            <h3 className="text-2xl font-semibold mb-6 text-center">We teach the:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                "10 Qira'at Al Soughrah (20 Riwayat)",
+                "10 Qira'at Al Koubra (20 Riwayat, Higher Qiraat: all the ways of Kitaab Allah, around 1000 ways)",
+                "Any Qirā'āt or Riwayat separately.",
+                "The 10 Qira'at Al Sagheer",
+                "The Extra 4 Qira'at (over the well known 10 ones)",
+                "All the books related to Al Qira'at with chain of narrators to their sheikh's authors.",
+                "All related knowledge linked to Qirā'āt."
+              ].map((item, index) => (
+                <Card key={index} className="hover:shadow-md transition-shadow duration-300">
+                  <CardContent className="p-4">
+                    <div className="flex gap-3 items-start">
+                      <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0"></div>
+                      <p className="text-base leading-relaxed">{item}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
-          {/* Qira'at Course Subsections */}
-          <div className="space-y-6 mt-12">
-            <div>
-              <p className="text-lg mb-2">
-                For more information about this, please follow this link:{" "}
-                <Link 
-                  to="/courses/qiraat" 
-                  className="text-blue-600 hover:text-blue-800 underline font-medium"
-                >
-                  Qiraat
-                </Link>
-              </p>
-              <h3 className="text-3xl font-bold">Ten Minor Qirā'āt recitations Lessons:</h3>
-            </div>
-
-            <div>
-              <p className="text-lg mb-2">
-                For more information about this, please follow this link:{" "}
-                <Link 
-                  to="/courses/qiraat" 
-                  className="text-blue-600 hover:text-blue-800 underline font-medium"
-                >
-                  Qiraat
-                </Link>
-              </p>
-              <h3 className="text-3xl font-bold">Ten Major Qirā'āt recitations Lessons:</h3>
-            </div>
-
-            <div>
-              <p className="text-lg mb-2">
-                For more information about this, please follow this link:{" "}
-                <Link 
-                  to="/courses/qiraat" 
-                  className="text-blue-600 hover:text-blue-800 underline font-medium"
-                >
-                  Qiraat
-                </Link>
-              </p>
-              <h3 className="text-3xl font-bold">Ten Sagher Qirā'āt recitations Lessons:</h3>
-            </div>
-
-            <div>
-              <p className="text-lg mb-2">
-                For more information about this, please follow this link:{" "}
-                <Link 
-                  to="/courses/qiraat" 
-                  className="text-blue-600 hover:text-blue-800 underline font-medium"
-                >
-                  Qiraat
-                </Link>
-              </p>
-              <h3 className="text-3xl font-bold">Extra Four Qirā'āt recitations Lessons:</h3>
-            </div>
+          {/* Qira'at Course Types */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Ten Minor Qirā'āt recitations Lessons",
+                description: "Comprehensive study of the ten minor recitation styles with certification and complete chain of transmission."
+              },
+              {
+                title: "Ten Major Qirā'āt recitations Lessons",
+                description: "In-depth mastery of the ten major recitation methods including all variations and narrations."
+              },
+              {
+                title: "Ten Sagher Qirā'āt recitations Lessons",
+                description: "Specialized instruction in the Sagher recitations with detailed analysis and practical application."
+              },
+              {
+                title: "Extra Four Qirā'āt recitations Lessons",
+                description: "Advanced study of the four additional Qira'at beyond the well-known ten recitation styles."
+              }
+            ].map((course, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2">
+                <CardHeader>
+                  <CardTitle className="text-xl">{course.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {course.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button 
+                    asChild
+                    variant="outline"
+                    className="w-full"
+                  >
+                    <Link to="/courses/qiraat">
+                      Learn More About Qiraat
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
         {/* Hifth Al Qura'an Lessons Overview Section - Added after Qira'at */}
-        <div className="mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Hifth Al Qura'an Lessons:</h2>
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Hifth Al Qura'an Lessons:</h2>
+          </div>
           
-          <Card className="p-8 hover:shadow-lg transition-shadow duration-300 border-2">
-            <CardContent className="p-0">
-              <div className="space-y-6">
-                <p className="text-lg leading-relaxed text-muted-foreground">
-                  Hifth al Qura'an is one of the first tasks of our honoured teachers, even before they decided to create 
-                  Ibn Al Jazari Institute. Many of our students are leading Taraweeh prayers, Imams or registered with 
-                  some Islamic universities when Hifth is prerequired. Some of them participated in many International 
-                  competitions reaching, for many occasions, good positions.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4 border-t">
-                  <p className="text-lg font-semibold text-foreground">
-                    To benefit from our large experience, apply for <span className="text-primary">Hifth Al Qur'an</span>:
+          <div className="max-w-6xl mx-auto">
+            <Card className="p-8 hover:shadow-lg transition-shadow duration-300 border-2 bg-gradient-to-br from-background to-muted/20">
+              <CardContent className="p-0">
+                <div className="space-y-6">
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    Hifth al Qura'an is one of the first tasks of our honoured teachers, even before they decided to create 
+                    Ibn Al Jazari Institute. Many of our students are leading Taraweeh prayers, Imams or registered with 
+                    some Islamic universities when Hifth is prerequired. Some of them participated in many International 
+                    competitions reaching, for many occasions, good positions.
                   </p>
-                  <Button 
-                    asChild
-                    className="bg-blue-600 hover:bg-blue-700 text-white"
-                  >
-                    <Link to="/courses/hifth">
-                      Learn More
-                    </Link>
-                  </Button>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                    <Card className="text-center bg-background/50">
+                      <CardContent className="pt-6">
+                        <Award className="h-10 w-10 mx-auto mb-3 text-primary" />
+                        <h4 className="font-semibold mb-2">International Recognition</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Students compete and achieve positions in international competitions
+                        </p>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="text-center bg-background/50">
+                      <CardContent className="pt-6">
+                        <Users className="h-10 w-10 mx-auto mb-3 text-primary" />
+                        <h4 className="font-semibold mb-2">Community Leaders</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Leading Taraweeh prayers and serving as Imams worldwide
+                        </p>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="text-center bg-background/50">
+                      <CardContent className="pt-6">
+                        <GraduationCap className="h-10 w-10 mx-auto mb-3 text-primary" />
+                        <h4 className="font-semibold mb-2">Academic Excellence</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Registered with Islamic universities and academic institutions
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t">
+                    <p className="text-lg font-semibold text-foreground text-center">
+                      To benefit from our large experience, apply for <span className="text-primary">Hifth Al Qur'an</span>:
+                    </p>
+                    <Button 
+                      asChild
+                      size="lg"
+                      className="bg-blue-600 hover:bg-blue-700 text-white"
+                    >
+                      <Link to="/courses/hifth">
+                        Learn More
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Arabic Lessons Section - Added after Hifth */}
