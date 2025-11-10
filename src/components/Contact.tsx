@@ -4,8 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Phone, Clock, Globe, Youtube, Instagram, Twitter, Facebook } from "lucide-react";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -28,16 +28,17 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        'service_0wlw351',
-        'template_21cs8qp',
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message
-        },
-        'LSo4YgAAwR0YN_rHk'
-      );
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message
+          }
+        ]);
+
+      if (error) throw error;
 
       toast({
         title: "Message sent!",
@@ -46,6 +47,7 @@ export const Contact = () => {
 
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error('Error submitting contact form:', error);
       toast({
         title: "Failed to send message",
         description: "Please try again later or contact us directly.",
